@@ -22,9 +22,9 @@ Welcome to the unofficial hub for **Nuvio**, a modern media player and aggregato
 *   [iOS / Sideloading](docs/installation/ios.md)
 
 ### ⚙️ Configuration
-*   [Addons Guide](docs/addons/README.md) - Finding and installing manifests.
-*   [Settings Breakdown](docs/settings/README.md) - UI & Playback options.
-*   [Debrid Integration](docs/integrations/debrid.md) - Real-Debrid setup.
+*   [Addons Guide](docs/addons/README.md)
+*   [Settings Breakdown](docs/settings/README.md)
+*   [Debrid Integration](docs/integrations/debrid.md)
 
 ### 🆘 Support & Info
 *   [Troubleshooting](docs/troubleshooting.md) - Fix common issues.
