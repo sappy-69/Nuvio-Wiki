@@ -37,7 +37,7 @@ The most popular and cost-effective service with the largest cache of files.
 ### 5. AllDebrid (AD)
 A highly reliable alternative to Real-Debrid with excellent customer support and browser extensions.
 - **Pros:** Great reliability, high speeds, supports many hosters.
-- **Cons:** Smaller cache than RD in some niche categories. 1 IP at once.
+- **Cons:** Smaller cache than other services. 1 IP at once.
 - **Setup:** [alldebrid.com/pin](https://alldebrid.com)
 
 ## 💡 Why use Debrid?
