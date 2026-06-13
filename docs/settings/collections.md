@@ -7,27 +7,21 @@
 
 Nuvio collections can be confusing. At its core though, it is a file system with folders and subfolders and files in those subfolders (catalogs). Below is a diagram to illustrate this.
 
-### Nuvio Collection Folder Architecture
+### Simplified Catalog Structure
 
 ```mermaid
 graph LR
-    Root["📁 my-collection/"] --> Manifest["📄 manifest.json"]
-    Root --> Assets["📁 assets/"]
-    Root --> Catalogs["📁 catalogs/"]
-    Root --> Config["📁 config/"]
+    MainCatalog[🎬 Action Catalog] --> Folder1[📁 2020s Action Movies]
+    MainCatalog --> Folder2[📁 2010s Action Movies]
 
-    Assets --> Icon["🖼️ icon.png"]
-    Assets --> Fanart["🖼️ background.jpg"]
+    Folder1 --> Movies2020[📄 List of 2020s Movies]
+    Folder2 --> Movies2010[📄 List of 2010s Movies]
+    
+    %% Styling
+    classDef category fill:#2a2a2a,stroke:#333,stroke-width:2px,color:#fff
+    classDef folder fill:#005f73,stroke:#001219,stroke-width:2px,color:#fff
+    classDef list fill:#0a9396,stroke:#001219,stroke-width:2px,color:#fff
 
-    Catalogs --> Movies["📄 movies.json"]
-    Catalogs --> TVShows["📄 tv_shows.json"]
-
-    Config --> Settings["📄 settings.json"]
-    Config --> Addons["📄 installed_addons.json"]
-
-    %% Styling 
-    classDef folder fill:#2d3748,stroke:#4a5568,stroke-width:2px,color:#fff
-    classDef file fill:#1a202c,stroke:#4a5568,stroke-width:1px,color:#e2e8f0
-
-    class Root,Assets,Catalogs,Config folder
-    class Manifest,Icon,Fanart,Movies,TVShows,Settings,Addons file
+    class MainCatalog category
+    class Folder1,Folder2 folder
+    class Movies2020,Movies2010 list
