@@ -18,7 +18,7 @@ Nuvio is empty by default. You need an addon to see content. See [Addons](addons
 
 ## 3. (Optional but Recommended) Setup Debrid
 > [!CAUTION]
-> It is extremelty recommened that you use a debrid service for safety and for a better experience. Continuing without a debrid service can put you at risk.
+> Continuing without a debrid service can put you at risk.
 >
 
 For high-quality 4K streaming without buffering:
