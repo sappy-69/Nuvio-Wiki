@@ -24,13 +24,13 @@ Nuvio collections can be confusing, but at their core they're just a file system
 ```mermaid
 graph LR
     %% Level 1: Collection Row on Home Screen
-    Row[🎬 Genres Row *on home screen*] --> Tile1[📁 Action Tile]
-    Row --> Tile2[📁 Sci-Fi Tile]
+    Row[🎬 Genres Row *on home screen*] --> Tile1[📁 Action Tile *on home screen*]
+    Row --> Tile2[📁 Sci-Fi Tile *on home screen*]
 
     %% Level 2 & 3: Tiles containing sub-folders
-    Tile1 --> Action_Movies_SubFolder[📁 Action Movies *on home screen*]
-    Tile1 --> Action_Shows_SubFolder[📁 Action Series *on home screen*]
-    Tile2 --> SciFi_Movies_SubFolder[📁 Sci-Fi Movies *on home screen*]
+    Tile1 --> Action_Movies_SubFolder[📁 Action Movies *inside of block*]
+    Tile1 --> Action_Shows_SubFolder[📁 Action Series *inside of block*]
+    Tile2 --> SciFi_Movies_SubFolder[📁 Sci-Fi Movies *inside of block*]
 
     %% Level 4: The final files/catalogs
     Action_Movies_SubFolder --> Action_Movies_Catalog[📄 Action Movies Catalog *the file*]
