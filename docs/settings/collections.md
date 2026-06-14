@@ -28,9 +28,9 @@ graph LR
     Row --> Tile2[📁 Sci-Fi Tile]
 
     %% Level 2 & 3: Tiles containing sub-folders
-    Tile1 --> Action_Movies_SubFolder[📁 Action Movies *inside tile*]
-    Tile1 --> Action_Shows_SubFolder[📁 Action Series *inside tile*]
-    Tile2 --> SciFi_Movies_SubFolder[📁 Sci-Fi Movies *inside tile*]
+    Tile1 --> Action_Movies_SubFolder[📁 Action Movies *on home screen*]
+    Tile1 --> Action_Shows_SubFolder[📁 Action Series *on home screen*]
+    Tile2 --> SciFi_Movies_SubFolder[📁 Sci-Fi Movies *on home screen*]
 
     %% Level 4: The final files/catalogs
     Action_Movies_SubFolder --> Action_Movies_Catalog[📄 Action Movies Catalog *the file*]
