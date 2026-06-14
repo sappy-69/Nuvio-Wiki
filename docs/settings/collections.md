@@ -23,20 +23,30 @@ Nuvio collections can be confusing, but at their core they're just a file system
 
 ```mermaid
 graph LR
-    MainCatalog[🎬 Action Catalog *on home screen*] --> Folder1[📁 2020s Action Movies *inside of Action Catalog*]
-    MainCatalog --> Folder2[📁 2010s Action Movies *inside of Action Catalog*]
+    %% Level 1: Collection Row on Home Screen
+    Row[🎬 Genres Row *on home screen*] --> Tile1[📁 Action Tile]
+    Row --> Tile2[📁 Sci-Fi Tile]
 
-    Folder1 --> Movies2020[📄 List of 2020s Movies *catalog for list*]
-    Folder2 --> Movies2010[📄 List of 2010s Movies *catalog for list*]
+    %% Level 2 & 3: Tiles containing sub-folders
+    Tile1 --> Action_Movies_SubFolder[📁 Action Movies *inside tile*]
+    Tile1 --> Action_Shows_SubFolder[📁 Action Series *inside tile*]
+    Tile2 --> SciFi_Movies_SubFolder[📁 Sci-Fi Movies *inside tile*]
+
+    %% Level 4: The final files/catalogs
+    Action_Movies_SubFolder --> Action_Movies_Catalog[📄 Action Movies Catalog *the file*]
+    Action_Shows_SubFolder --> Action_Shows_Catalog[📄 Action Series Catalog *the file*]
+    SciFi_Movies_SubFolder --> SciFi_Movies_Catalog[📄 Sci-Fi Movies Catalog *the file*]
 
     %% Styling
-    classDef category fill:#2a2a2a,stroke:#333,stroke-width:2px,color:#fff
-    classDef folder fill:#005f73,stroke:#001219,stroke-width:2px,color:#fff
-    classDef list fill:#0a9396,stroke:#001219,stroke-width:2px,color:#fff
+    classDef row fill:#2a2a2a,stroke:#333,stroke-width:2px,color:#fff
+    classDef tile fill:#005f73,stroke:#001219,stroke-width:2px,color:#fff
+    classDef subfolder fill:#0a9396,stroke:#001219,stroke-width:2px,color:#fff
+    classDef file fill:#94d2bd,stroke:#001219,stroke-width:2px,color:#333
 
-    class MainCatalog category
-    class Folder1,Folder2 folder
-    class Movies2020,Movies2010 list
+    class Row row
+    class Tile1,Tile2 tile
+    class Action_Movies_SubFolder,Action_Shows_SubFolder,SciFi_Movies_SubFolder subfolder
+    class Action_Movies_Catalog,Action_Shows_Catalog,SciFi_Movies_Catalog file
 ```
 
 ### Before You Start
