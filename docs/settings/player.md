@@ -6,7 +6,7 @@ Nuvio offers many player settings options. This section will discuss:
 - [Stream Selection and Stream Auto Play](#Stream-Selection-and-Stream-Auto-Play)
 - [Next Episode](#Next-Episode)
 - [Subtitle and Audio](#Subtitle-and-Audio)
-- Player and Decoder Options
+- [Player and Decoder Options](#Player-and-Decoder-Options)
 - MPV(WIP)
 
 
@@ -150,4 +150,7 @@ Options: Fast startup, Preferred only, All subtitles
 
 1. Fast startup: Prioritizes getting the video playing immediately. It skips the automatic process of fetching external addon subtitles. You will need to manually request them from within the video player if you want them. 
 2. Preferred only: A balanced approach. The system fetches subtitles from your addons during the initial load but only pulls the ones that match your specific language preferences.
-3. All subtitles: The most comprehensive option. It fetches and loads every single available addon subtitle for the video, giving you the maximum number of choices at the cost of a slightly longer loading time. 
+3. All subtitles: The most comprehensive option. It fetches and loads every single available addon subtitle for the video, giving you the maximum number of choices at the cost of a slightly longer loading time.
+
+
+### Player and Decoder Options
