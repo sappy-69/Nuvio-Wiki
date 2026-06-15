@@ -87,9 +87,9 @@ These configurations control exactly which addons or plugins are allowed to sear
 
 The Next Episode category includes several settings to optimize continuous viewing:
 
-* **Auto-Play Next Episode:** When toggled on, Nuvio starts the source selection process as soon as the "next episode" prompt appears. This prompt is triggered by whichever comes first:
+* **Auto-Play Next Episode:** When toggled on, Nuvio starts the source selection process as soon as the "next episode" prompt appears. This prompt is triggered by either:
     * An Outro skip is triggered.
-    * The Next Episode Threshold is met.
+    * If no Outro skip is present, the Next Episode Threshold is met.
 * **Prefer Binge Group:** Nuvio will try to find the next episode using the same source profile before falling back to other options. For example, if you watched an episode via *Aiostreams*, Nuvio will attempt to find the next episode from *Aiostreams* in the same quality before trying other providers.
 * **Reuse Binge Groups:** Ensures that when you return to a TV series, the app automatically remembers and prioritizes the exact same stream source or release group you were previously watching. If you selected a specific 1080p release group, your session anchors to that profile. When resuming from "Continue Watching," Nuvio will specifically look for that exact release group rather than auto-selecting a new source.
 * **Next Episode Threshold Mode:** Used as a fallback if no outro skip is present. This can be set in 0.5% increments from 100% down to 97%.
