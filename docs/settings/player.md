@@ -3,8 +3,8 @@
 Nuvio offers many player settings options. This section will discuss:
 
 [Intro and Outro Skip](#Intro-and-Outro-Skip)
-
 [Next Episode](#Next-Episode)
+[Stream Selection](#Stream-Selection)
 
 Subtitle and Audio
 Stream Selection
@@ -68,6 +68,8 @@ With this on, Nuvio will ensure that when you return toa TV series, the app auto
 2. When you resume the show later, from continue watching or the series details page, it won't default back to auto-selecting a result or have you pick a new source. It looks for the next episde from that exact same release group.
 
 **Next Episdoe Threshold Mode**
+
+## Stream Selection
 
 This will be used as a fallback if no outro skip is present. This can be set in increments of .5% from 100% to 97%. 
 
