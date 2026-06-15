@@ -130,15 +130,20 @@ These configurations control which text translations are displayed on screen and
 1. Preferred Language: The primary language you want for your subtitles.
 2. Secondary Preferred Language: Your fallback subtitle language. If your primary choice is unavailable, the application will attempt to load subtitles in this language instead.
 
-Use Forced Subtitles
-Options: Toggle (On/Off)
-Description: When enabled, the player prioritizes "forced" subtitles that match your preferred language settings. Forced subtitles are meant to be turned on even if you don't use regular subtitles, as they translate foreign languages, alien dialogue, or on-screen text while the rest of the movie is in your primary spoken language. 
-Show Only Preferred Languages
-Options: Toggle (On/Off)
-Description: Acts as a filter to clean up your subtitle menu. When enabled, it hides all subtitle tracks except the ones that exactly match your Preferred and Secondary Preferred Language settings.
+Use Forced Subtitles: When enabled, the player prioritizes "forced" subtitles that match your preferred language settings. Forced subtitles are meant to be turned on even if you don't use regular subtitles, as they translate foreign languages, alien dialogue, or on-screen text while the rest of the movie is in your primary spoken language. 
+
+- Options: Toggle (On/Off)
+
+Show Only Preferred Languages: Acts as a filter to clean up your subtitle menu. When enabled, it hides all subtitle tracks except the ones that exactly match your Preferred and Secondary Preferred Language settings.
 Addon Subtitle Startup
+
+- Options: Toggle (On/Off)
+
+Addon Subtitle Startup
+
 This setting controls how aggressively Nuvio searches for external subtitles when a video begins playing, balancing load times against subtitle availability.
 Options: Fast startup, Preferred only, All subtitles
-Description: * Fast startup: Prioritizes getting the video playing immediately. It skips the automatic process of fetching external addon subtitles. You will need to manually request them from within the video player if you want them. 
-Preferred only: A balanced approach. The system fetches subtitles from your addons during the initial load but only pulls the ones that match your specific language preferences.
-All subtitles: The most comprehensive option. It fetches and loads every single available addon subtitle for the video, giving you the maximum number of choices at the cost of a slightly longer loading time. 
+
+1. Fast startup: Prioritizes getting the video playing immediately. It skips the automatic process of fetching external addon subtitles. You will need to manually request them from within the video player if you want them. 
+2. Preferred only: A balanced approach. The system fetches subtitles from your addons during the initial load but only pulls the ones that match your specific language preferences.
+3. All subtitles: The most comprehensive option. It fetches and loads every single available addon subtitle for the video, giving you the maximum number of choices at the cost of a slightly longer loading time. 
