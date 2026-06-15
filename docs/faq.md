@@ -22,7 +22,7 @@ It is required that your metadata addons be first in the list of your addons. Yo
 If you installed Nuvio from an app store, the plugin feature is not included. You must use a sideload method to use Nuvio's plugin feature. When installing a plugin, you need to use the plugin section of Nuvio. Trying to install a plugin in the addon section of Nuvio will result in an error.
 
 ### What's the deal with trailers?
-With TMDB inegration configured, trailers will pull and play from TMDB. With it off, it will be pulled from your addons. The easiest way to ensure trailers work is to enable TMDB enrichment under integrations. TMDB API keys are free to obtain. Trailers are also only available on the sideload versions of Nuvio.
+Trailers are checked for against TMDB first with the users set language. If no trailers are found in the users set language it be defaulted to english. Trailers are taken from YouTube and then extracted by Nuvio that will be played in ExoPlayer. If trailers are not playing, check if you are using a VPN. Many VPNs are blocked by youtube. Trailers are also only available on the sideload versions of Nuvio.
 
 ### Where do I get images or gifs for my collections or profile?
 The easiest way is to get them from [Nuvio's community covers](https://nuvio.tv/covers).
