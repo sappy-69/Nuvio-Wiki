@@ -14,5 +14,7 @@
 - **GitHub Nuvio WebOS:** - [Source Code / Issues](https://github.com/NuvioMedia/NuvioTVWebOS)
 
 ## Community Resources
+- **Viren070** - [Guide](https://guides.viren070.me/)
 - **Duckstreams:** - [Guide and Quickstart Tool](https://duckkota.gitlab.io/guides/nuvio/)
 - **Nuvio Reddit:** - [Community discussion and support](https://www.reddit.com/r/Nuvio/)
+
