@@ -47,6 +47,8 @@ If you would like to support some of the developers of Nuvio:
 
 [𝔈𝔡𝔬](https://ko-fi.com/edoedac)
 
+[Hond](https://torbox.app/subscription?referral=41d1ac85-ee5e-4699-9f0a-92e67cbc2fb241d1ac85-ee5e-4699-9f0a-92e67cbc2fb2) - Torbox Referral
+
 ---
 
 ### 🤝 Contribution
