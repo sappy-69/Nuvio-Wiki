@@ -3,10 +3,14 @@
 Nuvio offers many player settings options. This section will discuss:
 
 [Intro and Outro Skip](#Intro-and-Outro-Skip)
+
 [Next Episode](#Next-Episdoe)
+
 Subtitle and Audio
 Stream Selection
+
 Decoder Options
+
 MPV
 
 
