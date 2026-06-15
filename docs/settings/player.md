@@ -155,15 +155,19 @@ Controls the visual experience and interactions within the media player.
 ### Advanced Processing & Decoding
 Technical settings that determine how your device's hardware and software process raw video and audio data.
 
-* **Decoder Priority:** Tells the application how to translate the video file into images.
-    * *Prefer device decoders:* Relies on your device's hardware chips. Best for smooth playback and battery conservation.
-    * *Prefer app decoders (FFmpeg):* Relies on the app's software to decode video. Useful as a fallback for unusual video formats.
-    * *Device decoders only:* Strictly forces hardware decoding, refusing to fall back to software processing.
+* **Decoder Priority:** Controls whether hardware or software (FFmpeg) decoders are used for audio and video.
+    * *Device decoders only:* Only use built-in hardware decoders. Most compatible but may not support all formats.
+    * *Prefer device decoders:* Use hardware decoders when available, fall back to FFmpeg. Recommended for most devices.
+    * *Prefer app decoders (FFmpeg):* Use FFmpeg decoders when available. Better format support but higher CPU usage.
 * **DV7 - HEVC Fallback:** Dolby Vision Profile 7 (DV7) is a premium HDR format. Playing a DV7 file on unsupported hardware often results in distorted colors (e.g., a completely purple or green screen). Enabling this strips the unreadable Dolby Vision data and maps the video down to standard HEVC (H.265) for correct color playback.
 * **Preserve DV mapping (DV7 to DV8.1) [TV Only]:** Keeps original creator-intended tone-mapping at the cost of slightly more processing power per frame.
 * **Convert DV5 to DV8.1 [TV Only]:** Signals Profile 5 streams as Profile 8.1 for HDR10-compatible output, helping correctly map colors on devices that lack a native DV5 decoder.
-* **Auto Frame Rate & Resolution [TV Only]:** Dynamically adjusts your television hardware's refresh rate to natively match the source file frame pacing, eliminating panning judder.
+* **Auto Frame Rate & Resolution [TV Only]:** Dynamically adjusts your television hardware's refresh rate to natively match the source file frame pacing, eliminating panning judder. Options include:
+    * *Off:* Don't change display refresh rate.
+    * *On start:* Switch when playback starts.
+    * *On start/stop:* Switch on start and restore on stop.
 * **Tunneled Playback:** An advanced Android TV feature. It allows audio and video streams to bypass standard OS pathways and process directly at the hardware level. This improves audio/video synchronization (lip-sync) and ensures smoother playback for heavy 4K HDR files.
+* **Force AC-3 Transcoding (Optical/SPDIF):** Transcodes multichannel formats (TrueHD, DTS, AAC, etc.) to Dolby Digital 5.1 in real-time for Optical/SPDIF connections.
 
 ---
 
@@ -171,7 +175,22 @@ Technical settings that determine how your device's hardware and software proces
 
 These settings manage how much video data is kept in memory and how peer-to-peer streams are handled.
 
-* **Custom Playback Buffers:** Overrides standard buffering with custom durations and target sizes. When off, the player uses stock Media3 buffer values.
+### Custom Playback Buffers
+Overrides Media3's default buffering with custom values. When off, the player uses stock Media3 buffer durations and target sizes.
+* **Min Buffer Duration:** Minimum amount of media to buffer. The player will try to ensure at least this much content is always buffered ahead of the current playback position.
+* **Max Buffer Duration:** Maximum amount of media to buffer. Must be at least the minimum buffer duration. Higher values use more memory but provide smoother playback on unstable connections.
+* **Initial Buffer:** How much content must be buffered before playback starts. Lower values start faster but may cause initial stuttering on slow connections.
+* **Buffer After Rebuffer:** How much content to buffer after playback stalls due to buffering. Higher values reduce repeated buffering interruptions.
+* **Back Buffer Duration:** How much already-played content to keep in memory. Enables fast backward seeking without re-downloading. Set to 0 to disable and save memory. (Reserves ~50MB on top of Target Buffer).
+* **Managed Memory Budget:** Caps the buffer to a safe share of this device's memory. Turn off to set the Target Buffer Size yourself (advanced — large values can crash low-memory devices).
+* **Target Buffer Size:** Maximum RAM used for ahead-buffering. Calculated from your device's available memory. (Requires turning off Managed Memory Budget).
+* **Allow Larger Target Buffer:** Removes the device-memory cap on the Target Buffer Size slider, allowing values up to 2GB. May crash on devices with less than 2GB of RAM.
+
+### Disk Cache
+* **VOD Disk Cache:** Persist downloaded bytes to disk for the current stream. Extends instant seek-back beyond the in-memory back buffer and survives brief network drops. Only applies to progressive streams (no HLS/DASH).
+* **Auto Size:** When on, the cache is sized from free disk space. Turn off to pick a size manually. Auto mode targets about 10% of free space. Manual mode keeps about 1024MB headroom.
+
+### Network & P2P
 * **Custom Network:** Commands the download client to forge multiple parallel connections to fetch progressive streams (instead of a single connection) to maximize high-bandwidth networks.
 * **P2P Streaming:** Enables or restricts direct processing configurations for raw peer-to-peer (torrent) streams.
 * **Hide torrent stats:** Suppresses real-time peer connection logs, seed counts, and download speed overlays from appearing during loading and playback.
