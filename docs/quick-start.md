@@ -52,7 +52,7 @@ Tailor your default language tracks so you do not have to change them every time
 
 ---
 
-# Addons & Plugins
+## 5. Addons & Plugins
 
 By default, Nuvio comes with **Cinemeta** and **Open Subtitles** installed out of the box. While these provide basic metadata and subtitle support, Nuvio is effectively an empty shell upon first launch. 
 
