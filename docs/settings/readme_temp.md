@@ -10,7 +10,7 @@ Nuvio offers deep customization tailored to your device. Below is a high-level o
 
 ## 1. General & UI
 *   **Theme & Colors:** Choose from preset color palettes and toggle pure black backgrounds (AMOLED Black) for OLED screens.
-*   **Layout:** Switch between various Home shelf configurations (List, Grid, Modern View)
+*   **Layout [TV Only]:** Switch between various Home shelf configurations (List, Grid, Modern View)
 *   **Poster Style:** Fine-tune the width and corner radius of your media cards.
 
 ## 2. Playback
