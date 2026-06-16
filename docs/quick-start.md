@@ -24,7 +24,7 @@ Nuvio is empty by default. You need an addon to see content. See [Addons](addons
 
 ---
 
-## 3. (Optional but Recommended) Setup Debrid
+## 3. Setup Debrid [Optional but recommended]
 > [!CAUTION]
 > Continuing without a debrid service can put you at risk.
 >
@@ -36,7 +36,7 @@ For high-quality 4K streaming without buffering:
 
 ---
 
-## 4. Connect Features & Integrations
+## 4. Connect Features & Integrations [Optional]
 To Enable metadata enrichment and external tracking, configure your external accounts.
 
 ### Trakt Configuration
