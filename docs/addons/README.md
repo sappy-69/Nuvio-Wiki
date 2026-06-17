@@ -24,7 +24,7 @@ To add an addon, you typically need a manifest URL obtained from the addon
 
 ---
 
-##Configuring an Addon for use with Nuvio Debrid Integration
+## Configuring an Addon for use with Nuvio Debrid Integration
 
 ---
 
