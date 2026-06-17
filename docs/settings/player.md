@@ -7,7 +7,7 @@ Nuvio offers a variety of player settings to customize your experience. This sec
 - [Next Episode](#next-episode)
 - [Subtitle and Audio](#subtitle-and-audio)
 - [Player and Decoder Options](#player-and-decoder-options)
-- [Buffer and Network](#buffer-and-network-[TV-Only])
+- [Buffer and Network](#Buffer-and-Network-[TV-Only])
 - [MPV](#MPV)
 
 > [!IMPORTANT]
