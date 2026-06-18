@@ -62,7 +62,7 @@ Whether you are swiping through catalogs on a phone or navigating with a remote 
 ## 4. "Continue Watching" & Up Next Behavior
 
 ### Shared Features
-* **Episode Tracking:** Enable *Up Next From Furthest Episode* to ensure the app surfaces the latest unwatched episode (disable this if you are actively rewatching an old season).
+* **Episode Tracking:** Enable *Up Next From Furthest Episode* to ensure the app surfaces the latest unwatched episode 
 * **Show Unaired Next Up Episodes:** Include upcoming, not-yet-released episodes in the "Continue Watching" queue before they air.
 * **Spoiler Prevention:** Use *Blur Unwatched Episodes* (Detail Page) and *Blur Unwatched in Continue Watching* so thumbnail images do not reveal major plot points.
 * **Thumbnail Preferences:** Toggle *Prefer/Use Episode Thumbnails* to prioritize specific episode stills over the generic series backdrop.
