@@ -21,18 +21,21 @@ Whether you are swiping through catalogs on a phone or navigating with a remote 
 ## 2. Home Screen & Layout Structures
 
 ### Shared Features
-* **Catalog Management:** Hide unreleased content to keep your library clean.
+* **Catalog Management:** Hide unreleased content to keep your library clean. Deep organizational control allows you to lock, hide, or pin specific collections (like *Discover*, *Franchises*, or *Streaming Services*) to curate exactly what appears on your home screen.
 * **Poster Card Style:** Fine-tune the dimensions of your media cards. Choose a *Width* preset (Compact, Dense, Standard, Balanced, Comfort, or Large) and a *Corner Radius* preset (Sharp, Subtle, Classic, Rounded, or Pill). A *Reset to Default* option reverts all changes.
+* **Landscape Posters:** Switch between traditional vertical portraits and horizontal landscape cards.
 
 ### Mobile App
 * **Hero Sections:** Use the *Show Hero Section* toggle to display an interactive carousel at the top of the home screen, driven directly by your selected Hero Catalogs.
-* **Advanced Catalog Management:** Deep organizational control allows you to lock, hide, or pin specific collections (like *Discover*, *Franchises*, or *Streaming Services*).
-* **Poster Customization Toggles:** Additional options to toggle *Landscape Posters* and *Hide Labels* (which also apply to collection tiles).
+* **Hide Labels:** Clean up the UI by hiding text labels under posters (Note: this applies only to media posters, not collection tiles).
 
 ### TV App
-* **Layout Styles:** Choose between a *Modern View*, *Grid View*, or *Classic View*. In the Modern view, you can toggle *Landscape Posters* and enable a *Fullscreen Hero Backdrop* for a highly visual interface.
+* **Modern View Layout:** The top half of the screen acts as a dynamic hero section. As you navigate through catalogs, the currently focused poster expands into this top area, displaying its full backdrop, metadata, and synopsis. The rest of the catalog remains in a horizontal row below.
+* **Classic View Layout:** Features a traditional, rotating Hero Carousel at the very top of the home screen. As you scroll down into the standard horizontal rows, the UI prioritizes the catalogs—focused posters do not dynamically expand or replace the background.
+* **Grid View Layout:** Functions similarly to the Classic view, featuring the same rotating Hero Carousel at the top of the screen. However, instead of horizontal rows, it organizes the catalog into a wrapping, vertical-scrolling grid format below the hero.
+* **Fullscreen Hero Backdrop:** Toggle this setting to allow the hero image or focused poster to take up the entire background canvas of the screen.
 * **Navigation & Sidebar:** Enable a floating *Modern Sidebar* and opt to *Collapse Sidebar* by default to maximize poster screen real estate.
-* **Focused Poster Behavior:** Enable *Expand Focused Poster to Backdrop* to allow the highlighted card to take over the background. You can adjust the *Backdrop Expand Delay* slider (e.g., 3s) to control how long the app waits before expanding the image.
+* **Focused Poster Behavior:** Adjust the *Backdrop Expand Delay* slider (e.g., 3s) to control how long the app waits before expanding a focused card into the backdrop (primarily used in Modern View).
 * **Home Screen Trailers:** Enable *Autoplay Trailer* to automatically play previews for focused content when available directly on the home screen.
 * **Catalog Details:** A *Show Catalog Type* option displays Movie/Series suffixes next to titles.
 
@@ -79,8 +82,10 @@ Whether you are swiping through catalogs on a phone or navigating with a remote 
 | Feature | Mobile App | TV App |
 | :--- | :--- | :--- |
 | **Pure Black Surfaces** | AMOLED Black (Global toggle) | Granular (Backgrounds vs. Panels) |
-| **Home Layout Views** | Standard vertical scrolling rows | Selectable Modern, Grid, or Classic Views |
-| **Poster/Tile Sizing** | Shared sizing presets + *Hide Labels* toggle | Shared sizing presets + *Expand to Backdrop* |
+| **Catalog Management** | Hide, Lock, or Pin Collections | Hide, Lock, or Pin Collections |
+| **Home Layout Views** | Vertical scrolling rows | Selectable Modern, Grid, or Classic Views |
+| **Hero Sections** | Interactive carousel at top | Dynamic (Modern) or Rotating Carousel (Classic/Grid) |
+| **Poster Adjustments** | Sizing presets + *Landscape* + *Hide Labels* | Sizing presets + *Landscape* + *Expand to Backdrop* |
 | **Sidebar Navigation** | Bottom/Hamburger tab menu | Floating Modern Sidebar (Collapsible) |
 | **Detail Page Layout** | Reorderable UI sections & tabs | External Metadata toggles & Auto-Play trailers |
-| **Continue Watching Cards** | Selectable Card, Wide, or Poster styles | Automatically adapts to chosen Home Layout View |
+| **Continue Watching** | Selectable Card, Wide, or Poster styles | Automatically adapts to chosen Home Layout View |
