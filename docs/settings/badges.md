@@ -21,8 +21,8 @@ The badge JSON is hosted at a URL (e.g., on GitHub) and imported once into your 
 
 Navigate to one of these locations depending on your Nuvio version:
 
-- **Settings → Streams → Badge URL**
-- **Settings → Connected Services → Formatting → Badge JSON URL**
+- Mobile: **Settings → Streams → Badge URL**
+- TV: **Settings → Layout → Streams → Badge URL**
 
 ### How to import
 
