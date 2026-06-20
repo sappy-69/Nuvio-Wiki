@@ -1,243 +1,209 @@
 # Stream Badges Guide
 
-Nuvio displays a set of **stream badges** next to every available source in the stream selection list. These badges are generated directly from the file's metadata and tell you exactly what you're getting before you press play — no guessing required.
+Nuvio uses a **Fusion-style badge system** — a fully customizable, image and color-based tagging layer that scans each stream's title or filename and displays visual badges on your stream selection screen. Badges are not fixed or built in; they come from a **JSON configuration file** that you import via a URL.
 
 > [!NOTE]
-> Badges are read from the stream title/filename that your addon returns. Nuvio does not transcode or alter streams. What the badge shows is what the source file actually contains.
+> Badges are community-created and fully customizable. The colors, icons, and labels you see depend entirely on the badge set you have imported. Nuvio has no hard-coded badge colors or styles.
 
 ---
 
-## How to Read the Badge Colors
+## How the Badge System Works
 
-Each badge category uses a **color tier system** to instantly communicate quality at a glance:
+When you open the stream selection screen, Nuvio reads the title text returned by your addon for each result. It then runs each title through a list of **regex patterns** defined in your badge JSON. When a pattern matches, Nuvio displays the corresponding badge image and color next to that stream entry.
 
-| Color | Border | Tier |
-| :--- | :--- | :--- |
-| 🟡 **Yellow** | Gold outline | Top tier — premium / lossless |
-| 🔵 **Blue** | Blue outline | High tier — excellent quality |
-| 🟢 **Green** | Green outline | Good tier — solid everyday quality |
-| 🟠 **Orange** | Orange outline | Mid tier — compressed / lower quality |
-| 🔴 **Red** | Red outline | Low tier — highly compressed / poor source |
-
-The hierarchy flows from yellow → blue → green → orange → red. The higher the tier, the better the quality.
+The badge JSON is hosted at a URL (e.g., on GitHub) and imported once into your Nuvio settings. You can import up to **3 separate badge JSON URLs** simultaneously, allowing you to layer badge sets from multiple sources.
 
 ---
 
-## Badge Categories
+## Setting Up Badges
 
-Nuvio organizes badges into six categories. Each badge on a stream card will come from one of these groups.
+### Where to find the setting
 
----
+Navigate to one of these locations depending on your Nuvio version:
 
-### 🖥️ Resolution
+- **Settings → Streams → Badge URL**
+- **Settings → Connected Services → Formatting → Badge JSON URL**
 
-The native pixel dimensions of the video. Higher resolution means more detail.
+### How to import
 
-| Badge | Tier | Notes |
-| :--- | :---: | :--- |
-| **4K** | 🟡 Yellow | Ultra HD — 3840×2160. Requires a capable display and strong connection. |
-| **2K** | 🔵 Blue | Quad HD — 2560×1440. Less common; usually a cinema DCP rip. |
-| **FHD** | 🟢 Green | Full HD — 1920×1080. The standard for most high-quality releases. |
-| **HD** | 🟠 Orange | HD — 1280×720. Acceptable, noticeably softer on large screens. |
-| **576p** | 🔴 Red | PAL DVD quality — visible compression on modern displays. |
-| **480p** | 🔴 Red | NTSC DVD quality — SD. |
-| **360p** | 🔴 Red | Web-compressed SD. |
-| **240p** | 🔴 Red | Very low quality. |
-| **144p** | 🔴 Red | Minimum quality. Streaming fallback only. |
+1. Obtain a badge JSON URL (see [Community Badge Sets](#community-badge-sets) below).
+2. Open Nuvio and go to the Badge URL field in settings.
+3. Paste the direct URL to the `.json` file.
+4. Press **Import**.
+5. You should see a confirmation such as `1/3 URLs imported`.
 
----
-
-### 🎬 Quality (Source)
-
-The release type, reflecting the origin of the file and how much it has been compressed.
-
-| Badge | Tier | Notes |
-| :--- | :---: | :--- |
-| **Remux** | 🟡 Yellow | A lossless rip of a Blu-ray disc. Zero compression. The gold standard for home theater. |
-| **BluRay** | 🔵 Blue | Compressed from Blu-ray. Excellent quality; smaller than a Remux. |
-| **WebDL** | 🟢 Green | Downloaded directly from a streaming service at native quality. |
-| **WebRip** | 🟠 Orange | Captured/re-encoded from a streaming service. Slightly lower than WebDL. |
-| **HDRip** | 🔴 Red | Encoded from an HDR source; quality varies. |
-| **HC HDRip** | 🔴 Red | Hardcoded subtitle rip — burned-in subtitles cannot be removed. |
-| **DVDRip** | 🔴 Red | Ripped from a DVD disc. |
-| **HDTV** | 🔴 Red | Captured from a live TV broadcast; can include logos, artifacts. |
-| **SCR** | 🔴 Red | Screener — early promotional copy sent to critics; may have watermarks. |
-| **TC** | 🔴 Red | Telecine — filmed from a film print using a telecine machine. |
-| **TS** | 🔴 Red | Telesync — recorded in a theater using a camera on a tripod. |
-| **CAM** | 🔴 Red | Camrip — recorded in a theater by hand. Lowest possible source quality. |
+> [!WARNING]
+> A known bug in some versions of Nuvio causes the Badge URL to be **removed if you press "Save Settings"** after importing. After importing your badge URL, exit the settings screen without pressing Save. Verify your badges appear on the stream selection screen before closing the app.
 
 > [!TIP]
-> For the best experience pair a **Remux** or **BluRay** quality with a Debrid service like TorBox or Premiumize. See the [Debrid Integration guide](/integrations/debrid) for setup instructions.
+> Always use the **raw** GitHub/Gist URL for badge JSON files. The URL should start with `https://raw.githubusercontent.com/...` — not the standard GitHub page URL, which returns HTML, not the JSON content.
 
 ---
 
-### 🏟️ IMAX
+## Community Badge Sets
 
-Indicates whether the stream contains an IMAX-mastered picture.
+These are the most widely used and recommended badge configurations in the Nuvio community:
 
-| Badge | Tier | Notes |
-| :--- | :---: | :--- |
-| **IMAX Enhanced** | 🟡 Yellow | Full IMAX Enhanced certification — expanded 1.90:1 aspect ratio with DTS:X audio. |
-| **IMAX** | 🔵 Blue | IMAX Digital remaster — improved contrast and sound mix. |
+### NardBadges (Recommended)
+
+A comprehensive set of 100+ badges covering Resolution, Quality, IMAX, Visual (HDR), Audio, Channels, Encoder, and Language categories — maintained by [vowl313](https://github.com/vowl313/NardBadges).
+
+| Variant | URL |
+| :--- | :--- |
+| **NardBadges** (full set with tier styling) | `https://raw.githubusercontent.com/vowl313/NardBadges/refs/heads/main/NardBadges.json` |
+| **NardBadges Slim** (without tier indicators) | `https://raw.githubusercontent.com/vowl313/NardBadges/refs/heads/main/NardBadges_Slim.json` |
+
+The NardBadges repository also includes recommended **Name** and **Description** formatter templates to pair with the badges. Check the [NardBadges GitHub](https://github.com/vowl313/NardBadges) README for the latest formatter strings.
+
+---
+
+## What Badges Display
+
+The badge system recognizes metadata parsed directly from stream titles. Badges are typically organized into these categories:
+
+| Category | Examples |
+| :--- | :--- |
+| **Resolution** | 4K, 2K, FHD, HD, 576p, 480p, 360p, 240p, 144p |
+| **Quality / Source** | Remux, BluRay, WebDL, WebRip, HDRip, HC HDRip, DVDRip, HDTV, SCR, TC, TS, CAM |
+| **IMAX** | IMAX Enhanced, IMAX |
+| **Visual / HDR** | Dolby Vision, HDR10+, HDR10, HDR, SDR, 10bit, HLG, AI |
+| **Audio** | ATMOS / TrueHD, DTS:X / DTS-HD MA, ATMOS / DD+, TrueHD, DD+, DD, DTS-HD MA, DTS-HD, DTS-ES, DTS, FLAC, OPUS, AAC |
+| **Channels** | 7.1, 6.1, 5.1, 2.0, 1.0 |
+| **Encoder** | AV1, HEVC, AVC, XviD, DivX |
+| **Language** | Various language flags depending on the badge set |
+
+Badges are only displayed if the stream title contains text that matches the badge's regex pattern. If your addon does not include quality information in stream titles, badges may not appear.
+
+---
+
+## Badge Priority Hierarchy
+
+When a stream title matches multiple badges in the same category, Nuvio uses a **priority hierarchy** to determine which single badge to display. The hierarchy shown below is the order in which Nuvio will select the displayed badge — the first match wins.
+
+### Resolution
+
+```
+4K → 2K → FHD → HD → 576p → 480p → 360p → 240p → 144p
+```
+
+### Quality / Source
+
+```
+Remux → BluRay → WebDL → WebRip → HDRip → HC HDRip → DVDRip → HDTV → SCR → TC → TS → CAM
+```
+
+### IMAX
+
+```
+IMAX Enhanced → IMAX
+```
+
+### Visual / HDR
+
+```
+Dolby Vision  ─┐
+HDR10+        ─┘→ HDR10 → HDR → SDR
+
+10bit → HLG → AI  (separate track)
+```
+
+### Audio (Dolby track)
+
+```
+ATMOS / TrueHD → ATMOS / DD+ → TrueHD → DD+ → DD
+```
+
+### Audio (DTS track)
+
+```
+DTS:X / DTS-HD MA → DTS-HD MA → DTS-HD → DTS-ES → DTS
+```
+
+### Audio (Other)
+
+```
+FLAC → OPUS → AAC
+```
+
+### Channels
+
+```
+7.1 → 6.1 → 5.1 → 2.0 → 1.0
+```
+
+### Encoder
+
+```
+AV1 → HEVC → AVC → XviD → DivX
+```
 
 > [!NOTE]
-> IMAX Enhanced content uses a wider aspect ratio (fills more of the screen vertically). If black bars are narrower than usual, this is expected behavior for IMAX-formatted releases.
+> This hierarchy is determined by the order of entries in your badge JSON file. Badge sets like NardBadges are already ordered correctly. If you build a custom set, place higher-priority badges earlier in the `filters` array.
 
 ---
 
-### 🎨 Visual (HDR / Color Format)
+## Creating or Customizing Badges
 
-Describes the High Dynamic Range format and color encoding of the stream.
+### Using Badger (Recommended)
 
-| Badge | Tier | Notes |
-| :--- | :---: | :--- |
-| **Dolby Vision** | 🟡 Yellow | The premium HDR format. Scene-by-scene dynamic metadata for best-in-class color accuracy. Requires a Dolby Vision-capable display. |
-| **HDR10+** | 🟡 Yellow | Dynamic HDR with frame-by-frame metadata. Second only to Dolby Vision. |
-| **HDR10** | 🔵 Blue | Standard HDR with static metadata. Excellent on any HDR-capable TV. |
-| **HDR** | 🟢 Green | Generic HDR flag — format not specified. |
-| **SDR** | 🟠 Orange | Standard Dynamic Range — no HDR. Works on all displays. |
-| **10bit** | 🟠 Orange | 10-bit color depth without HDR metadata. Better gradients than 8-bit SDR. |
-| **HLG** | 🟠 Orange | Hybrid Log-Gamma — a broadcast HDR standard common in live TV and streaming. |
-| **AI** | 🔴 Red | AI-upscaled content. Quality depends on the upscaling model used. |
+**[Badger](https://nintle.github.io/Badger/)** is a free, community-made web tool built specifically for creating and editing Fusion/Nuvio badge configurations — no coding required.
+
+With Badger you can:
+- Browse and import existing badge set templates
+- Toggle individual badges on or off
+- Change badge colors, border colors, and images
+- Preview your configuration
+- Generate a shareable JSON URL to paste directly into Nuvio
+
+**GitHub:** [Nintle/Badger](https://github.com/Nintle/Badger)
+
+### Manual JSON Structure
+
+If you prefer to write your own badge JSON, Nuvio uses the following schema:
+
+```json
+{
+  "filters": [
+    {
+      "id": "unique-badge-id",
+      "groupId": "resolution",
+      "name": "4K",
+      "pattern": "(?i)\\b(4k|2160p|uhd)\\b",
+      "imageURL": "https://example.com/badges/4k.png",
+      "tagColor": "#33FFFFFF",
+      "borderColor": "#FFAAAAAA"
+    }
+  ]
+}
+```
+
+| Field | Description |
+| :--- | :--- |
+| `id` | A unique string identifier for this badge entry. |
+| `groupId` | The category group (e.g., `resolution`, `audio`, `visual`). Only one badge per group is shown per stream. |
+| `name` | The display label used for accessibility and fallback text. |
+| `pattern` | A **regex** pattern matched against the stream title. Use `(?i)` for case-insensitive matching. |
+| `imageURL` | A direct URL to the badge image (PNG recommended). |
+| `tagColor` | Background color in `#AARRGGBB` format (alpha first). |
+| `borderColor` | Border color in `#AARRGGBB` format (alpha first). |
 
 > [!TIP]
-> For Dolby Vision streams, make sure to review the [DV7 HEVC Fallback and DV5 to DV8.1 settings](/settings/player#advanced-processing--decoding) in the Player guide if you experience purple/green color distortion.
+> Colors in the JSON use Android's `#AARRGGBB` format — the first two hex digits are **alpha (opacity)**, not the standard web `#RRGGBB`. For example, `#FF0877F9` is fully opaque Nuvio blue, while `#330877F9` is 20% opacity blue.
+
+> [!IMPORTANT]
+> The `groupId` field controls badge exclusivity. Only one badge per `groupId` is shown per stream entry. Badges within the same group compete based on their order in the `filters` array — the first match wins. Place higher-priority badges earlier in the list.
 
 ---
 
-### 🔊 Audio
+## Troubleshooting
 
-Describes the audio codec or format of the stream. Two separate badge groups cover this: the main codec family and the DTS variant.
-
-#### Primary Audio Codec
-
-| Badge | Tier | Notes |
-| :--- | :---: | :--- |
-| **ATMOS / TRUEHD** | 🟡 Yellow | Dolby Atmos embedded in a TrueHD lossless track. The pinnacle of object-based surround sound. |
-| **DTS:X / DTS-HD MA** | 🟡 Yellow | DTS:X object-based audio inside a DTS-HD Master Audio lossless container. |
-| **ATMOS / DD+** | 🔵 Blue | Dolby Atmos delivered in a compressed Dolby Digital Plus container (common on streaming services). |
-| **TRUEHD** | 🔵 Blue | Dolby TrueHD lossless — the same codec used on Blu-ray discs. |
-| **DTS:X / DTS-HD** | 🔵 Blue | DTS:X object-based audio in a standard DTS-HD container. |
-| **DD+** | 🟢 Green | Dolby Digital Plus (EAC-3) — compressed but high-quality; supports up to 7.1 channels. |
-| **DTS-HD MA** | 🟢 Green | DTS-HD Master Audio lossless — equivalent quality to TrueHD. |
-| **DTS-HD** | 🟠 Orange | DTS-HD lossy — higher quality than standard DTS but compressed. |
-| **DTS-ES** | 🟠 Orange | DTS Extended Surround — a 6.1 variant of standard DTS. |
-| **FLAC** | 🟢 Green | Free Lossless Audio Codec — lossless, common in music and some film rips. |
-| **OPUS** | 🟠 Orange | Modern open-source lossy codec; excellent quality at low bitrates. |
-| **DD** | 🔴 Red | Dolby Digital (AC-3) — the legacy 5.1 standard from DVD. |
-| **DTS** | 🔴 Red | Standard DTS — legacy lossy surround format. |
-| **AAC** | 🔴 Red | Advanced Audio Codec — common compressed stereo/surround format from streaming. |
-
-> [!TIP]
-> If you are using an **optical (SPDIF) connection** to an older AV receiver, enable **Force AC-3 Transcoding** in the Player settings. Optical connections cannot carry TrueHD, DTS-HD MA, or Atmos and will produce silence or static without transcoding. See the [Player Guide](/settings/player#advanced-processing--decoding).
-
----
-
-### 🎵 Channels
-
-The number of discrete audio channels in the stream.
-
-| Badge | Tier | Notes |
-| :--- | :---: | :--- |
-| **7.1** | 🟡 Yellow | 8-channel surround (L/R, C, LFE, LS/RS, LBS/RBS). Full immersive surround. |
-| **6.1** | 🔵 Blue | 7-channel surround. Rare; found in older DTS-ES releases. |
-| **5.1** | 🟢 Green | 6-channel surround (L/R, C, LFE, LS/RS). The most common home theater format. |
-| **2.0** | 🟠 Orange | Stereo. Great for headphones and 2-speaker setups. |
-| **1.0** | 🔴 Red | Mono. Very rare; typically only in older or CAM-quality sources. |
-
-> [!TIP]
-> If you are on a **stereo-only setup** (TV speakers or a soundbar) but a stream is showing 5.1 or 7.1 audio and the dialogue sounds quiet, enable **Downmix** in Settings → Playback → Audio to properly fold the surround channels into stereo. See the [Player Guide](/settings/player#audio-settings).
-
----
-
-### 🎞️ Encoder
-
-The video codec used to compress and encode the stream.
-
-| Badge | Tier | Notes |
-| :--- | :---: | :--- |
-| **AV1** | 🟡 Yellow | The latest open-source codec. Best compression efficiency; requires modern hardware to decode. |
-| **HEVC** | 🔵 Blue | H.265 — the current standard for 4K and HDR. Excellent quality at lower file sizes vs. H.264. |
-| **AVC** | 🟢 Green | H.264 — the universal standard. Plays everywhere with minimal CPU. |
-| **XviD** | 🟠 Orange | An older MPEG-4 codec. Common in DVDRip and early web releases. |
-| **DivX** | 🔴 Red | Legacy MPEG-4 codec. Very old; found only in very old releases. |
-
-> [!NOTE]
-> **AV1** streams may require hardware decoding support. If an AV1 stream stutters or fails, try switching the **Decoder Priority** to *Prefer app decoders (FFmpeg)* in the [Player settings](/settings/player#advanced-processing--decoding) [Android TV Only].
-
----
-
-## Reading a Full Stream Entry
-
-A stream card in Nuvio can display multiple badges at once. Here is how to interpret a typical high-quality combination:
-
-```
-4K  |  Remux  |  IMAX Enhanced  |  Dolby Vision  |  ATMOS / TRUEHD  |  7.1  |  HEVC
-```
-
-This tells you:
-- **4K** resolution
-- **Remux** — lossless, direct Blu-ray rip
-- **IMAX Enhanced** — expanded aspect ratio with IMAX mastering
-- **Dolby Vision** — premium dynamic HDR
-- **ATMOS / TRUEHD** — object-based lossless surround
-- **7.1 channels** — full immersive surround field
-- **HEVC** encoder — efficient H.265 compression
-
-And a more typical streaming-quality entry:
-
-```
-FHD  |  WebDL  |  HDR10  |  DD+  |  5.1  |  AVC
-```
-
-- Full HD, downloaded directly from a streaming platform, HDR10 color, Dolby Digital Plus 5.1 in H.264.
-
----
-
-## Badge Hierarchy Reference Chart
-
-The full priority tree from the provided diagram, top to bottom within each category:
-
-```mermaid
-flowchart TD
-  subgraph Resolution
-    R1[4K] --> R2[2K] --> R3[FHD] --> R4[HD] --> R5[576p] --> R6[480p] --> R7[360p] --> R8[240p] --> R9[144p]
-  end
-  subgraph Quality
-    Q1[Remux] --> Q2[BluRay] --> Q3[WebDL] --> Q4[WebRip] --> Q5[HDRip] --> Q6[HC HDRip] --> Q7[DVDRip] --> Q8[HDTV] --> Q9[SCR] --> Q10[TC] --> Q11[TS] --> Q12[CAM]
-  end
-  subgraph IMAX
-    I1[IMAX Enhanced] --> I2[IMAX]
-  end
-  subgraph Visual
-    V1[Dolby Vision] --- V2[HDR10+] --> V3[HDR10] --> V4[HDR] --> V5[SDR]
-    V6[10bit] --- V7[HLG]
-    V8[AI]
-  end
-  subgraph Audio
-    A1[ATMOS / TRUEHD] --> A2[ATMOS / DD+] --> A3[TRUEHD] --> A4[DD+] --> A5[DD]
-    A6[DTS:X / DTS-HD MA] --> A7[DTS-HD MA] --> A8[DTS-HD] --> A9[DTS-ES] --> A10[DTS]
-    A11[FLAC] --- A12[OPUS] --- A13[AAC]
-  end
-  subgraph Channels
-    C1[7.1] --> C2[6.1] --> C3[5.1] --> C4[2.0] --> C5[1.0]
-  end
-  subgraph Encoder
-    E1[AV1] --> E2[HEVC] --> E3[AVC] --> E4[XviD] --> E5[DivX]
-  end
-```
-
----
-
-## Filtering Streams by Badge (Regex Mode)
-
-If you prefer to filter streams automatically rather than reading each badge manually, you can use **Regex Selection Mode** to auto-play only streams that match specific quality badges. See the [Stream Selection guide](/settings/player#stream-selection-and-stream-auto-play) for setup details.
-
-**Examples:**
-- Match only 4K Remux sources: `4K.*Remux`
-- Match any lossless audio: `TrueHD|DTS-HD MA|FLAC`
-- Match HEVC or AV1 encoded: `HEVC|AV1`
-- Avoid CAM and TS sources: `^(?!.*(CAM|\.TS\b|\.TC\b)).*$`
+| Problem | Solution |
+| :--- | :--- |
+| Badges not appearing after import | Ensure you are using the **raw** GitHub URL (starts with `raw.githubusercontent.com`). |
+| Badge URL disappears after saving | Known bug — import the URL and **exit without pressing Save**. |
+| Badges showing but wrong priority | The badge set's `filters` array order controls priority. Re-order entries or use Badger to adjust. |
+| No badges on streams from a specific addon | The addon may not include quality metadata in stream titles. Check the addon's output format. |
+| Badges look different from screenshots | Badge appearance depends on the set you imported. Colors and icons are fully customizable — different sets look different. |
 
 ---
 
@@ -245,13 +211,14 @@ If you prefer to filter streams automatically rather than reading each badge man
 
 | Resource | Description |
 | :--- | :--- |
-| [Nuvio Player Settings](/settings/player) | Configure decoder priority, audio downmix, and optical transcoding based on your badge readings. |
-| [Debrid Integration Guide](/integrations/debrid) | Set up TorBox or Premiumize to unlock high-quality Remux and 4K badge streams. |
-| [AIOStreams Configuration](/addons/) | Configure your P2P scraper to return streams with accurate quality badges. |
-| [Nuvio Discord](https://discord.gg/nuvio) | Community help for badge and stream quality questions. |
-| [Stremio Addons List](https://stremio-addons.net/) | Browse compatible addons and verify which quality badges each addon returns. |
-| [TRaSH Guides — Quality Definitions](https://trash-guides.info/Radarr/Radarr-recommended-naming-scheme/) | In-depth reference for understanding file naming conventions that produce these badges. |
-| [Viren070's Nuvio Guide](https://guides.viren070.me/) | Community guide with addon setup recommendations. |
+| [Badger](https://nintle.github.io/Badger/) | Community web tool for creating and editing badge JSON without coding. |
+| [Badger GitHub](https://github.com/Nintle/Badger) | Source code and documentation for the Badger tool. |
+| [NardBadges GitHub](https://github.com/vowl313/NardBadges) | Popular 100+ badge set with full and slim variants, plus formatter templates. |
+| [NardBadges JSON (Full)](https://raw.githubusercontent.com/vowl313/NardBadges/refs/heads/main/NardBadges.json) | Direct raw URL — paste into Nuvio's Badge URL field. |
+| [NardBadges JSON (Slim)](https://raw.githubusercontent.com/vowl313/NardBadges/refs/heads/main/NardBadges_Slim.json) | Slim variant without tier indicators. |
+| [r/Nuvio](https://www.reddit.com/r/Nuvio/) | Community discussion — find new badge sets and formatter templates shared by other users. |
+| [Nuvio Discord](https://discord.gg/nuvio) | Live community help for badge configuration questions. |
+| [Duckstreams Guide](https://duckkota.gitlab.io/guides/nuvio/) | Community setup guide including badge and formatter configuration steps. |
+| [Viren070's Guide](https://guides.viren070.me/) | Comprehensive Nuvio setup guide maintained by the community. |
 
 [Back to top](#stream-badges-guide)
-
