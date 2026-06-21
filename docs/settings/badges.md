@@ -55,8 +55,8 @@ A comprehensive set of 100+ badges covering Resolution, Quality, IMAX, Visual (H
 
 | Full Set (with Tier) | Slim Set (no Tier) |
 | :---: | :---: |
-| ![NardBadges Full Part 1](/images/badges/nardbadges-1.png) | ![NardBadges Slim Part 1](/images/badges/nardbadges-slim-1.png) |
-| ![NardBadges Full Part 2](/images/badges/nardbadges-2.png) | ![NardBadges Slim Part 2](/images/badges/nardbadges-slim-2.png) |
+| ![NardBadges Full Part 1](./images/nardbadges-1.png) | ![NardBadges Slim Part 1](./images/nardbadges-slim-1.png) |
+| ![NardBadges Full Part 2](./images/nardbadges-2.png) | ![NardBadges Slim Part 2](./images/nardbadges-slim-2.png) |
 
 The NardBadges repository also includes recommended **Name** and **Description** formatter templates to pair with the badges. Check the [NardBadges GitHub](https://github.com/vowl313/NardBadges) README for the latest formatter strings.
 
@@ -84,8 +84,8 @@ BetterFormatter presets follow a naming convention: `{style}-{layout}-{mode}-{dv
 
 | Colored Style | Mono Style |
 | :---: | :---: |
-| **Always DV**<br>![Colored Combo Always](/images/badges/betterformatter-colored-bgb-combo-always.png) | **Always DV**<br>![Mono Combo Always](/images/badges/betterformatter-mono-bgb-combo-always.png) |
-| **No DV**<br>![Colored Combo No DV](/images/badges/betterformatter-colored-bgb-combo-nodv.png) | **No DV**<br>![Mono Combo No DV](/images/badges/betterformatter-mono-bgb-combo-nodv.png) |
+| **Always DV**<br>![Colored Combo Always](./images/betterformatter-colored-bgb-combo-always.png) | **Always DV**<br>![Mono Combo Always](./images/betterformatter-mono-bgb-combo-always.png) |
+| **No DV**<br>![Colored Combo No DV](./images/betterformatter-colored-bgb-combo-nodv.png) | **No DV**<br>![Mono Combo No DV](./images/betterformatter-mono-bgb-combo-nodv.png) |
 
 > [!TIP]
 > The above table shows the most popular variants. See the [BetterFormatter GitHub](https://github.com/9mousaa/BetterFormatter/tree/main/presets) for the full list of 32 presets, or use the [BetterFormatter Configurator](https://9mousaa.github.io/BetterFormatter/) to build a custom set.
@@ -102,7 +102,7 @@ A polished badge set for Nuvio with a premium look — maintained by [leonevz](h
 
 **Preview:**
 
-![Elite Badges](/images/badges/elite-badges.png)
+![Elite Badges](./images/elite-badges.png)
 
 **GitHub:** [leonevz/Elite-Badges](https://github.com/leonevz/Elite-Badges)
 
@@ -123,7 +123,7 @@ A clean, icon-based badge set designed for the Nuvio Android TV app with a focus
 
 | Minimalist White | Minimalist White (No Codecs) |
 | :---: | :---: |
-| ![Minimalist White](/images/badges/minimalist-white.png) | ![Minimalist White No Codecs](/images/badges/minimalist-white-no-codecs.png) |
+| ![Minimalist White](./images/minimalist-white.png) | ![Minimalist White No Codecs](./images/minimalist-white-no-codecs.png) |
 
 > [!TIP]
 > The Minimalist set works best when paired with the included AIOStreams formatter templates. See the [repository README](https://github.com/sweatycab/nuvio-minimalist-badges) for the matching `title-template.txt` and `description-template.txt` files.
