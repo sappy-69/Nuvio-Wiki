@@ -36,6 +36,8 @@ Navigate to one of these locations depending on your Nuvio version:
 > [!TIP]
 > Always use the **raw** GitHub/Gist URL for badge JSON files. The URL should start with `https://raw.githubusercontent.com/...` — not the standard GitHub page URL, which returns HTML, not the JSON content.
 
+[Back to top](#stream-badges-guide)
+
 ---
 
 ## Community Badge Sets
@@ -59,6 +61,8 @@ A comprehensive set of 100+ badges covering Resolution, Quality, IMAX, Visual (H
 | ![NardBadges Full Part 2](./images/nardbadges-2.png) | ![NardBadges Slim Part 2](./images/nardbadges-slim-2.png) |
 
 The NardBadges repository also includes recommended **Name** and **Description** formatter templates to pair with the badges. Check the [NardBadges GitHub](https://github.com/vowl313/NardBadges) README for the latest formatter strings.
+
+[Back to top](#stream-badges-guide)
 
 ---
 
@@ -90,6 +94,8 @@ BetterFormatter presets follow a naming convention: `{style}-{layout}-{mode}-{dv
 > [!TIP]
 > The above table shows the most popular variants. See the [BetterFormatter GitHub](https://github.com/9mousaa/BetterFormatter/tree/main/presets) for the full list of 32 presets, or use the [BetterFormatter Configurator](https://9mousaa.github.io/BetterFormatter/) to build a custom set.
 
+[Back to top](#stream-badges-guide)
+
 ---
 
 ### Elite Badges
@@ -105,6 +111,8 @@ A polished badge set for Nuvio with a premium look — maintained by [leonevz](h
 ![Elite Badges](./images/elite-badges.png)
 
 **GitHub:** [leonevz/Elite-Badges](https://github.com/leonevz/Elite-Badges)
+
+[Back to top](#stream-badges-guide)
 
 ---
 
@@ -127,6 +135,8 @@ A clean, icon-based badge set designed for the Nuvio Android TV app with a focus
 
 > [!TIP]
 > The Minimalist set works best when paired with the included AIOStreams formatter templates. See the [repository README](https://github.com/sweatycab/nuvio-minimalist-badges) for the matching `title-template.txt` and `description-template.txt` files.
+
+[Back to top](#stream-badges-guide)
 
 ---
 
@@ -157,6 +167,8 @@ The badge system recognizes metadata parsed directly from stream titles. Badges 
 | **Language** | Various language flags depending on the badge set |
 
 Badges are only displayed if the stream title contains text that matches the badge's regex pattern. If your addon does not include quality information in stream titles, badges may not appear.
+
+[Back to top](#stream-badges-guide)
 
 ---
 
@@ -224,6 +236,8 @@ AV1 → HEVC → AVC → XviD → DivX
 > [!NOTE]
 > This hierarchy is determined by the order of entries in your badge JSON file. Badge sets like NardBadges are already ordered correctly. If you build a custom set, place higher-priority badges earlier in the `filters` array.
 
+[Back to top](#stream-badges-guide)
+
 ---
 
 ## Creating Custom Badges
@@ -261,6 +275,8 @@ If you prefer to write your own badge JSON, Nuvio uses the following schema:
 
 > [!IMPORTANT]
 > The `groupId` field controls badge exclusivity. Only one badge per `groupId` is shown per stream entry. Badges within the same group compete based on their order in the `filters` array — the first match wins. Place higher-priority badges earlier in the list.
+
+[Back to top](#stream-badges-guide)
 
 ---
 
