@@ -42,7 +42,7 @@ Navigate to one of these locations depending on your Nuvio version:
 
 These are the most widely used and recommended badge configurations in the Nuvio community. If you prefer not to import a raw URL directly, see the [Badge Editor Tools](#badge-editor-tools) section below for web-based tools that let you browse, preview, and customize these sets visually.
 
-### NardBadges (Recommended)
+### NardBadges
 
 A comprehensive set of 100+ badges covering Resolution, Quality, IMAX, Visual (HDR), Audio, Channels, Encoder, and Language categories — maintained by [vowl313](https://github.com/vowl313/NardBadges).
 
