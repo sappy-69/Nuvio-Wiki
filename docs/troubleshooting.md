@@ -292,7 +292,7 @@ Trakt is used to sync your watch history, progress, and ratings across devices. 
 **Step 1 — Re-authenticate Trakt**
 
 - Go to **Settings → Trakt**.
-- Tap **Log Out**, then **Log In** and complete the authorization flow again. For detailed setup and sync scopes, see [Trakt Integration](integrations/trakt.mdd) or the [Trakt Bridge Import Tool](integrations/tmdb-mdblist-trakt.md#trakt-integration).
+- Tap **Log Out**, then **Log In** and complete the authorization flow again. For detailed setup and sync scopes, see [Trakt Integration](integrations/trakt.md) or the [Trakt Bridge Import Tool](integrations/tmdb-mdblist-trakt.md#trakt-integration).
 - This refreshes your access token and resolves the majority of Trakt sync failures.
 
 **Step 2 — Check Trakt's service status**
