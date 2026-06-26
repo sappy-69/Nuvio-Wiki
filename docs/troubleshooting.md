@@ -27,9 +27,9 @@ If none of these resolve your issue, continue to the relevant section below.
 
 Buffering is the most common complaint and almost always has a fixable cause. Work through the steps below in order.
 
-**Step 1 — Confirm your Debrid service is connected**
+**Step 1 — Confirm your Debrid service is connected** [Debrid Integration Only]
 
-Nuvio relies on a Debrid service (e.g., Real-Debrid, AllDebrid, TorBox) to deliver high-quality, cached streams. Without one, streams are sourced from slower public peers.
+Nuvio relies on a Debrid service (e.g., Torbox, Real-Debrid, AllDebrid) to deliver high-quality, cached streams. Without one, streams are sourced from slower public peers.
 
 - Open **Settings → Debrid** and verify your provider is listed and authenticated.
 - If it shows an error, log out and re-authenticate.
@@ -42,43 +42,36 @@ Use a speed test app or visit a speed test site in your device's browser.
 - For 4K/HDR, aim for at least **25 Mbps**.
 - If your speed is consistently low, the issue is your connection, not Nuvio. Try moving closer to your router or switching from Wi-Fi to a wired connection.
 
-**Step 3 — Toggle Hardware Acceleration**
-
-Hardware acceleration offloads video decoding to your device's GPU. On some devices it causes instability; on others it is essential for smooth playback.
-
-- Go to **Settings → Player → Hardware Acceleration** and toggle it.
-- Restart the app after changing this setting, then test again.
-
-**Step 4 — Clear the app cache**
+**Step 3 — Clear the app cache**
 
 A corrupted or oversized cache can cause playback to stall.
 
 - On Android/Fire TV: **Device Settings → Applications → Nuvio → Clear Cache**.
-- On mobile: **Device Settings → General → iPhone Storage → Nuvio → Offload App** (iOS), or **Settings → Apps → Nuvio → Storage → Clear Cache** (Android).
+- On mobile: **Device Settings → General → iPhone Storage → Nuvio → Offload App** [iOS Only], or **Settings → Apps → Nuvio → Storage → Clear Cache** [Android Mobile Only].
 - Restart Nuvio after clearing.
 
-**Step 5 — Toggle tunneled playback**
+**Step 4 — Toggle tunneled playback** [Android TV Only]
 
 If your network filters or throttles video traffic, tunneled playback can help route around it.
 
 - Go to **Settings → Playback** and toggle the **Tunneled Playback** option on or off.
 - Test with it both enabled and disabled to see which performs better on your network.
 
-**Step 6 — Adjust Auto Frame Rate (AFR) settings**
+**Step 5 — Adjust Auto Frame Rate (AFR) settings** [Android TV Only]
 
 Mismatched frame rates between the stream and your display can cause judder or dropped frames that look like buffering.
 
 - Go to **Settings → Player → Auto Frame Rate** and experiment with the available options.
 - If your TV/display does not support AFR well, disabling it entirely may give smoother results.
 
-**Step 7 — Toggle "Fast Subtitle Startup"**
+**Step 6 — Toggle "Fast Subtitle Startup"**
 
 Some subtitle tracks are loaded during buffering and can delay or interrupt stream startup.
 
 - Go to **Settings → Subtitles** and toggle **Fast Subtitle Startup** off.
 - Test whether playback starts more reliably.
 
-**Step 8 — Try an external player**
+**Step 7 — Try an external player**
 
 If Nuvio's built-in player continues to struggle, offloading to a dedicated player can help.
 
@@ -102,22 +95,14 @@ This is the fastest fix for codec-related rendering failures.
 - Go to **Settings → Player → External Player** and select **VLC** or **MX Player**.
 - Return to the content and try playing it again.
 
-**Step 2 — Toggle Hardware Acceleration**
-
-Hardware decoders sometimes fail silently on certain stream formats, producing a black screen.
-
-- Go to **Settings → Player → Hardware Acceleration** and disable it.
-- Restart the app and try the stream again.
-- If that resolves it, you can try re-enabling hardware acceleration after a firmware update from your device manufacturer.
-
-**Step 3 — Check audio output settings**
+**Step 2 — Check audio output settings** [Android TV Only]
 
 If video plays but there is no audio, your audio output mode may not be compatible with the stream.
 
-- Go to **Settings → Player → Audio Output** and try changing between **Stereo**, **Surround (Passthrough)**, and **Auto**.
+- Go to **Settings → Player → Audio** and try changing between **Stereo**, **Surround (Passthrough)**, ect.
 - If you are on a TV, check that your HDMI cable supports audio return (ARC/eARC) and that the TV's audio settings are not muted or set to an unsupported format.
 
-**Step 4 — Try a different stream**
+**Step 3 — Try a different stream**
 
 Sometimes a specific stream file is malformed. Use the stream picker (available during playback) to select an alternate source for the same content.
 
@@ -137,7 +122,7 @@ This message means Nuvio queried your addons and received no usable results. The
 Many addons filter out non-Debrid results by default. An expired or disconnected Debrid account will cause most streams to be hidden.
 
 - Log in to your Debrid provider's website and check your account status.
-- Re-authenticate in Nuvio under **Settings → Debrid** if necessary.
+- Re-authenticate in Nuvio under **Settings → Debrid** if necessary. [Debrid Integration Only]
 
 **Step 3 — Try a different content source**
 
@@ -303,7 +288,7 @@ Trakt occasionally experiences outages. If re-authentication does not help, chec
 ### 3.2 Watch Progress Not Saving
 
 - Confirm that Trakt integration is active and authenticated (see above).
-- Nuvio scrobbles progress when you reach a certain threshold of a video (typically 80–90%). Playing only a few minutes may not trigger a scrobble.
+- Nuvio scrobbles progress when you reach a certain threshold of a video. Playing only a few seconds may not trigger a scrobble.
 - If you are using an external player, scrobbling may not be supported. Switch back to the internal player for automatic progress tracking.
 
 ---
@@ -363,7 +348,7 @@ Slow addon responses extend the time it takes for the stream list to appear.
 
 ## 5. Debrid Service Issues
 
-### 5.1 Debrid Not Connecting
+### 5.1 Debrid Not Connecting [Debrid Integration Only]
 
 - Go to **Settings → Debrid** and check the status indicator next to your provider.
 - If it shows disconnected or an error, tap to re-authenticate.
@@ -490,7 +475,7 @@ If you have worked through the relevant sections above and your issue persists, 
 
 - Your device type and OS version (e.g., Fire TV Stick 4K, Fire OS 7).
 - The version of Nuvio you have installed.
-- Your Debrid provider (e.g., Real-Debrid, TorBox).
+- Your Debrid provider (e.g., Torbox,).
 - Which addons you have installed.
 - A clear description of the problem, including any error messages displayed.
 - Steps you have already tried.
