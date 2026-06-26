@@ -445,7 +445,7 @@ If streams load but are consistently slow regardless of content:
 
 ### 8.1 Android Phone & Tablet
 
-- **Sideloading:** Nuvio is distributed can be distributed as an APK. Enable **Install from Unknown Sources** under **Settings → Security** (or **Settings → Apps → Special App Access → Install Unknown Apps**) before installing. For full installation instructions, see the [Android Mobile Installation Guide](../installation/android-mobile.md).
+- **Sideloading:** Nuvio is distributed can be distributed as an APK. Enable **Install from Unknown Sources** under **Settings → Security** (or **Settings → Apps → Special App Access → Install Unknown Apps**) before installing. For full installation instructions, see the [Android Mobile Installation Guide](installation/android-mobile.md).
 - **Picture-in-Picture (PiP):** If PiP does not work, go to **Device Settings → Apps → Nuvio → Picture-in-Picture** and enable it.
 - **Orientation lock:** If the app is stuck in portrait or landscape mode, check your system-level screen rotation lock.
 
@@ -465,10 +465,6 @@ Samsung Tizen TVs do not support direct APK sideloading. Nuvio must be installed
 
 - For full installation instructions, see the [Tizen Installation Guide](installation/tizen.md).
 - If the app fails to load after installation, confirm TizenBrew is running the correct Nuvio Tizen build.
-- Some Tizen features (hardware decoding, Dolby audio passthrough) depend on your TV model's capabilities. Check the [Platform Compatibility](settings/ui-and-customization.md) guide for a full feature comparison.
-
-> [!NOTE]
-> Not all player features available on Android are available on Tizen due to platform limitations. Check the [Platform Compatibility](settings/ui-and-customization.md) guide for a full feature comparison.
 
 ---
 
