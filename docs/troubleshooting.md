@@ -54,7 +54,7 @@ A corrupted or oversized cache can cause playback to stall.
 
 If your network filters or throttles video traffic, tunneled playback can help route around it.
 
-- Go to **Settings → Playback** and toggle the **Tunneled Playback** option on or off (see [Player Settings](/player.md#player-and-decoder-options)).
+- Go to **Settings → Playback** and toggle the **Tunneled Playback** option on or off (see [Player Settings](/../../player.md#player-and-decoder)).
 - Test with it both enabled and disabled to see which performs better on your network.
 
 **Step 5 — Adjust Auto Frame Rate & Resolution settings** [Android TV Only]
