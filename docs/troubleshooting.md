@@ -162,7 +162,7 @@ Newly released movies and TV episodes may not yet be cached or indexed by Debrid
 Some addons (e.g., AIOStreams) require specific configuration tied to your Debrid credentials. If the addon was recently reconfigured or your API key changed:
 
 - Re-enter your addon manifest URL with updated credentials.
-- Refer to the [Debrid Integration Guide](/integrations/debrid.md) for your specific provider.
+- Refer to the [Debrid Integration Guide](../integrations/debrid.md) for your specific provider.
 
 > [!WARNING]
 > Do not share your addon manifest URL publicly — it typically contains your Debrid API key or account token.
