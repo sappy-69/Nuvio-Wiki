@@ -29,7 +29,7 @@ Buffering is the most common complaint and almost always has a fixable cause. Wo
 
 **Step 1 — Confirm your Debrid service is connected** [Debrid Integration Only]
 
-Nuvio relies on a Debrid service (e.g., Torbox, Real-Debrid, AllDebrid) to deliver high-quality, cached streams. Without one, streams are sourced from slower public peers.
+Nuvio relies on a Debrid service (e.g., TorBox, Real-Debrid, AllDebrid) to deliver high-quality, cached streams. Without one, streams are sourced from slower public peers.
 
 - Open **Settings → Debrid** and verify your provider is listed and authenticated.
 - If it shows an error, log out and re-authenticate.
@@ -57,21 +57,32 @@ If your network filters or throttles video traffic, tunneled playback can help r
 - Go to **Settings → Playback** and toggle the **Tunneled Playback** option on or off.
 - Test with it both enabled and disabled to see which performs better on your network.
 
-**Step 5 — Adjust Auto Frame Rate (AFR) settings** [Android TV Only]
+**Step 5 — Adjust Auto Frame Rate & Resolution settings** [Android TV Only]
 
 Mismatched frame rates between the stream and your display can cause judder or dropped frames that look like buffering.
 
-- Go to **Settings → Player → Auto Frame Rate** and experiment with the available options.
-- If your TV/display does not support AFR well, disabling it entirely may give smoother results.
+- Go to **Settings → Player → Advanced Processing & Decoding → Auto Frame Rate & Resolution** and experiment with the available options. Choices are **Off**, **On start** (switch when playback begins), and **On start/stop** (also restores your display's original rate when you stop).
+- If your TV/display does not support AFR well, setting it to **Off** may give smoother results.
 
-**Step 6 — Toggle "Fast Subtitle Startup"**
+**Step 6 — Adjust Addon Subtitle Startup**
 
-Some subtitle tracks are loaded during buffering and can delay or interrupt stream startup.
+Automatically fetching all available subtitle tracks at startup can delay or interrupt stream initialization.
 
-- Go to **Settings → Subtitles** and toggle **Fast Subtitle Startup** off.
-- Test whether playback starts more reliably.
+- Go to **Settings → Player → Subtitle and Audio → Addon Subtitle Startup** and set it to **Fast startup**.
+- This skips the automatic subtitle fetch so video begins immediately. You can still select subtitles manually from within the player menu during playback.
+- If you want subtitles loaded but with less overhead, **Preferred only** is a balanced middle option — it fetches only your configured language rather than every available track.
 
-**Step 7 — Try an external player**
+**Step 7 — Adjust buffer settings** [Android TV Only]
+
+On Android TV devices, you can manually increase how much video is pre-loaded into memory, which smooths out playback on slower or less stable connections.
+
+- Go to **Settings → Player → Buffer and Network → Custom Playback Buffers** and enable it.
+- Increase **Min Buffer Duration** and **Max Buffer Duration** to give the player more runway ahead of your current position. Start conservatively (e.g., 15s min, 50s max) and raise from there if buffering continues.
+
+> [!NOTE]
+> Higher buffer values consume more RAM. Enable **Managed Memory Budget** to let Nuvio automatically cap buffer usage to a safe share of your device's available memory, which prevents instability on lower-end devices.
+
+**Step 8 — Try an external player**
 
 If Nuvio's built-in player continues to struggle, offloading to a dedicated player can help.
 
@@ -95,14 +106,22 @@ This is the fastest fix for codec-related rendering failures.
 - Go to **Settings → Player → External Player** and select **VLC** or **MX Player**.
 - Return to the content and try playing it again.
 
-**Step 2 — Check audio output settings** [Android TV Only]
+**Step 2 — Adjust audio decoding settings** [Android TV Only]
 
-If video plays but there is no audio, your audio output mode may not be compatible with the stream.
+If video plays but there is no audio, or dialogue is inaudible beneath loud effects:
 
-- Go to **Settings → Player → Audio** and try changing between **Stereo**, **Surround (Passthrough)**, ect.
-- If you are on a TV, check that your HDMI cable supports audio return (ARC/eARC) and that the TV's audio settings are not muted or set to an unsupported format.
+- Go to **Settings → Player → Subtitle and Audio → Audio Settings** and enable **Enable Downmix**. This converts multichannel surround audio (5.1 or 7.1) into stereo, which resolves cases where the center dialogue channel is effectively silent on stereo setups.
+- If you are connecting your TV to a sound system via an **optical/SPDIF cable**, go to **Settings → Player → Advanced Processing & Decoding** and enable **Force AC-3 Transcoding (Optical/SPDIF)**. Optical connections have a strict bandwidth limit and cannot carry modern uncompressed formats like TrueHD or DTS-HD. This setting transcodes them to Dolby Digital 5.1 in real-time so your receiver can decode them.
+- Confirm your TV or receiver is not muted and is not set to an audio format your hardware does not support.
 
-**Step 3 — Try a different stream**
+**Step 3 — Fix distorted colors (green or purple screen)**
+
+If video plays but with obviously wrong colors — a green tint, purple cast, or a completely washed-out image — your content is likely Dolby Vision Profile 7 (DV7), which many devices cannot natively decode.
+
+- Go to **Settings → Player → Advanced Processing & Decoding** and enable **DV7 - HEVC Fallback**. This strips the unreadable Dolby Vision layer and maps the video down to standard HEVC (H.265), restoring correct colors.
+- If you are on Android TV and seeing issues specifically with DV5 content, you can additionally try enabling **Convert DV5 to DV8.1** in the same menu.
+
+**Step 4 — Try a different stream**
 
 Sometimes a specific stream file is malformed. Use the stream picker (available during playback) to select an alternate source for the same content.
 
@@ -164,9 +183,9 @@ If content plays but the quality is lower than expected (e.g., 480p instead of 1
 
 **Subtitles not appearing:**
 
-- Go to **Settings → Subtitles** and confirm subtitles are enabled.
+- Go to **Settings → Player → Subtitle and Audio → Subtitle Preferences** and confirm subtitles are enabled and a preferred language is set.
 - During playback, open the player menu and check whether a subtitle track is selected.
-- If no tracks are listed, the content may not have embedded subtitles. Nuvio may not have fetched external subtitles — check your subtitle source settings.
+- If no tracks are listed, the content may not have embedded subtitles. Verify that **Addon Subtitle Startup** (under the same menu) is not set to **Fast startup**, as that mode skips the automatic external subtitle fetch.
 
 **Subtitles are out of sync:**
 
@@ -175,7 +194,7 @@ If content plays but the quality is lower than expected (e.g., 480p instead of 1
 
 **Subtitles cause stuttering at startup:**
 
-- Toggle off **Fast Subtitle Startup** in **Settings → Subtitles** (see [Section 1.1](#11-video-stutters-or-buffers), Step 7).
+- Go to **Settings → Player → Subtitle and Audio → Addon Subtitle Startup** and set it to **Fast startup**. This skips the automatic subtitle fetch so playback begins without waiting for external subtitle sources to respond. Subtitles can still be selected manually once the video is playing.
 
 ---
 
@@ -184,7 +203,7 @@ If content plays but the quality is lower than expected (e.g., 480p instead of 1
 If dialogue is in the wrong language or the wrong audio track is selected by default:
 
 - Open the playback menu during the stream and switch the **Audio Track** to the correct language or channel layout.
-- To set a default: go to **Settings → Player → Default Audio Language** and select your preferred language.
+- To set a permanent default: go to **Settings → Player → Subtitle and Audio → Audio Settings** and configure **Preferred Audio Language**. You can also set a **Secondary Audio Language** as a fallback if your primary choice is unavailable in a given stream.
 
 ---
 
@@ -202,7 +221,7 @@ Nuvio has separate builds for different device types. Installing the wrong versi
 - **Android TV, Fire TV, Google TV:** Use the **TV** APK.
 - **Samsung Tizen (via TizenBrew):** Use the Tizen-specific installation process — see the [Tizen Installation Guide](tizen-installation.md).
 
-Download the correct version from the [official releases page](official-links.md).
+Download the correct version from the [Official Links](official-links.md) page, which includes links to the GitHub release pages for each build (Mobile, TV, and WebOS).
 
 **Cause 2 — Insufficient storage space**
 
@@ -386,7 +405,7 @@ If Nuvio cannot reach its servers or load any content at all:
 
 ---
 
-### 6.2 VPN Conflicts
+### 6.2 6.2 VPN Conflicts
 
 VPNs are a common source of intermittent connectivity and playback issues.
 
@@ -421,7 +440,7 @@ If streams load but are consistently slow regardless of content:
 
 ### 7.2 High Memory Usage or Battery Drain
 
-- Hardware acceleration reduces CPU load during playback and typically improves battery life on supported devices. Ensure it is enabled under **Settings → Player → Hardware Acceleration**.
+- Decoder efficiency significantly affects battery life. Go to **Settings → Player → Advanced Processing & Decoding → Decoder Priority** and set it to **Prefer device decoders**. This uses your hardware decoder chips when available, offloading work from the CPU and reducing battery drain compared to software (FFmpeg) decoding.
 - Avoid leaving Nuvio running in the background indefinitely. Close it fully when not in use.
 - On Android, check **Battery Settings → Battery Usage** to confirm Nuvio is the source of drain and not a background service.
 
@@ -475,7 +494,7 @@ If you have worked through the relevant sections above and your issue persists, 
 
 - Your device type and OS version (e.g., Fire TV Stick 4K, Fire OS 7).
 - The version of Nuvio you have installed.
-- Your Debrid provider (e.g., Torbox,).
+- Your Debrid provider (e.g., TorBox, Real-Debrid, AllDebrid).
 - Which addons you have installed.
 - A clear description of the problem, including any error messages displayed.
 - Steps you have already tried.
@@ -487,8 +506,3 @@ If you have worked through the relevant sections above and your issue persists, 
 
 > [!IMPORTANT]
 > Never share your Debrid API key, addon manifest URLs, or account credentials publicly when asking for help. Redact them from any screenshots or logs you share.
-
----
-
-*Last updated: refer to the documentation repository for revision history.*
-
