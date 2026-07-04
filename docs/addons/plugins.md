@@ -1,1 +1,118 @@
+# Plugins
+
+Nuvio relies on two independent systems to find something for you to watch: add-ons and plugins. They solve overlapping problems — both can hand Nuvio a stream link for a title — but they're built differently, run in different places, and come from different ecosystems. This guide covers what a plugin actually is, how Nuvio loads and runs one, where people find them, and how to install one yourself.
+
+> [!NOTE]
+> This guide describes Nuvio's current Kotlin Multiplatform build. The plugin system was rewritten alongside that migration, replacing the runtime used by the earlier React Native app. If you run into a plugin repository that won't load, see [Troubleshooting](#troubleshooting) before assuming your setup is broken.
+
+- **[Plugins vs. Add-ons](#plugins-vs-add-ons)**
+- **[How Plugins Work](#how-plugins-work)**
+- **[Where to Find Plugins](#where-to-find-plugins)**
+- **[Installing a Plugin](#installing-a-plugin)**
+
+---
+
+## Plugins vs. Add-ons
+
+On the surface, both give you streams. Underneath, they're not the same kind of object at all:
+
+| | Add-ons | Plugins |
+|---|---|---|
+| **Protocol** | Stremio's addon protocol — a manifest plus `catalog`/`meta`/`stream` HTTP endpoints | Nuvio's own plugin repository format |
+| **Where the logic runs** | On the add-on developer's own server, entirely outside Nuvio | Inside Nuvio, on your device |
+| **What Nuvio actually does** | Sends an HTTP request, parses the JSON that comes back | Downloads the plugin's code and executes it |
+| **Hosting** | Wherever the developer deploys it — Beamup, a VPS, Cloudflare Workers, self-hosted | A manifest file, typically hosted on GitHub |
+| **Scope** | Can supply catalogs, metadata, subtitles, live TV, and debrid resolution — streams are one capability among several | Streams only |
+| **Portability** | Works in any Stremio-protocol client (Stremio itself, Nuvio, others) | Nuvio-specific; won't work in Stremio or other addon-protocol apps |
+
+The structural difference is the one that matters most: an add-on is a contract. Nuvio calls out to a URL and trusts the response to follow the Stremio schema — this is also why existing Stremio add-ons like AIOStreams, Torrentio, or MediaFusion work in Nuvio without modification, and why Nuvio can treat metadata add-ons, subtitle add-ons, and stream add-ons as the same basic object with different capabilities declared in the manifest.
+
+A plugin is code. Nuvio doesn't ask a remote server for an answer — it pulls down a script and runs it locally. That's a meaningfully different trust boundary: an add-on can only ever hand you data, while a plugin runs with whatever access Nuvio's plugin runtime grants it.
+
+[Back to top](#Plugins)
+
+---
+
+## How Plugins Work
+
+### Plugin Repositories
+
+A plugin repository is a manifest file — not an app, not a package you download and unzip. The manifest lists one or more individual providers, and Nuvio stores the manifest's URL rather than a local copy of anything. You can have several repositories active simultaneously, and each repository can expose multiple providers that you enable or disable independently, so adding a repository doesn't mean every provider inside it starts running immediately.
+
+### On-Device Execution
+
+Enabled provider code runs inside an embedded QuickJS instance bundled into the app — a lightweight JavaScript engine, not a browser or webview. This is what actually separates a plugin from an add-on at runtime: the provider's fetch/scrape logic executes on your device, inside that sandboxed JS environment, rather than on a server you'll never see.
+
+### Request Flow
+
+1. You open a title and Nuvio needs sources for it.
+2. Nuvio invokes each enabled provider inside the QuickJS runtime, passing the title's identifiers — typically a TMDB or IMDb ID, media type, and season/episode for series.
+3. The provider's own code makes whatever network requests it needs against its target source, then returns a normalized list of stream candidates (name, URL, quality, and similar metadata) back to Nuvio.
+4. Nuvio merges those results with anything your active add-ons returned into a single source-selection list for playback.
+
+### What Plugins Can and Can't Do
+
+Because provider code runs inside a constrained script runtime rather than as a native module, a plugin is generally scoped to making network requests and returning structured stream data — it isn't a general-purpose extension with the same reach as the app itself. Treat a plugin as "fetches and parses," not "does anything Nuvio can do."
+
+> [!WARNING]
+> If you're writing or evaluating a provider, don't assume manifest formats or example code from before the Kotlin Multiplatform rewrite still apply — the runtime changed, and repositories built for the older app may fail to load or may load without any providers appearing. Check a repository's own documentation for the current schema rather than relying on older tutorials.
+
+[Back to top](#Plugins)
+
+---
+
+## Where to Find Plugins
+
+There's no in-app plugin store in the app-store sense — a plugin repository is just a manifest URL, so finding one means finding a URL from a source you're willing to trust. In practice, that comes from a few places:
+
+- **Community-maintained repositories** shared on GitHub, usually as a public repo with a `manifest.json` you point Nuvio at directly.
+- **Community spaces** around the project (forums, Discord, subreddits) where repository links get shared and discussed.
+- **The repository's own README or release notes**, which is the most reliable way to confirm a given repository is still maintained and compatible with your current app version.
+
+> [!CAUTION]
+> A plugin executes code on your device — that's a different risk profile than an add-on, which only ever returns data. Only add repositories from sources you trust, and be aware that plugin availability and reliability change often as source sites and scrapers get blocked or shut down. Nuvio itself is a client only: it doesn't host, vet, or guarantee any third-party plugin, and you're responsible for using it in a way that complies with the laws in your jurisdiction.
+
+[Back to top](#Plugins)
+
+---
+
+## Installing a Plugin
+
+### Prerequisites
+
+- Nuvio installed and updated to a current release
+- A Nuvio account, if you want the plugin to sync across your devices (optional, but recommended — the same pattern used for collections and add-ons)
+- The manifest URL of the plugin repository you want to add
+
+### Via the Account Dashboard
+
+This is the easier path for typing or pasting a long URL.
+
+1. Log in at the Nuvio website and make sure you're on the **Account** tab.
+2. In the left sidebar, select **Plugins**.
+3. Select **Add Plugin** (or **Add Repository**).
+4. Paste the repository's manifest URL, give it a name, and save.
+5. The repository syncs to your devices the next time the app connects — no need to re-enter anything on-device.
+
+### Directly in the App
+
+1. Open **Settings** on your device.
+2. Find the plugin/repository management section. Labeling varies a bit across the mobile, TV, and desktop builds — look for **Plugins**, or a **Repositories** entry under content/discovery settings.
+3. Choose **Add Repository** and paste the manifest URL.
+4. Refresh to fetch the provider list from that manifest.
+5. Enable the individual providers you want — adding the repository alone doesn't turn any of them on.
+
+### Verifying a Successful Install
+
+- Open any title and check its source list — a working provider shows up by name alongside your add-on sources.
+- In Settings, the repository should show as enabled with a recent fetch/update timestamp rather than an error state.
+- If no providers appear after adding a repository, re-check that you enabled at least one provider inside it — the repository and its providers are toggled separately.
+
+### Troubleshooting
+
+- **"Manifest not recognized" or similar parsing error:** double-check the URL points directly at the manifest file (usually a raw GitHub URL ending in `.json`), not at a webpage that displays it.
+- **Repository added but no providers load:** the repository may be built for the pre-rewrite version of Nuvio — look for a recent update in the repository's own commit history before assuming your install is broken.
+- **Providers load but return no streams:** this is usually the provider's target source being down or blocked, not a Nuvio problem — try a different provider from the same repository if one is available.
+
+[Back to top](#Plugins)
 
