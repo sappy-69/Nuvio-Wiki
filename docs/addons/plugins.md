@@ -5,11 +5,6 @@ Nuvio relies on two independent systems to find something for you to watch: add-
 > [!NOTE]
 > This guide describes Nuvio's current Kotlin Multiplatform build. The plugin system was rewritten alongside that migration, replacing the runtime used by the earlier React Native app. If you run into a plugin repository that won't load, see [Troubleshooting](#troubleshooting) before assuming your setup is broken.
 
-- **[Plugins vs. Add-ons](#plugins-vs-add-ons)**
-- **[How Plugins Work](#how-plugins-work)**
-- **[Where to Find Plugins](#where-to-find-plugins)**
-- **[Installing a Plugin](#installing-a-plugin)**
-
 ---
 
 ## Plugins vs. Add-ons
