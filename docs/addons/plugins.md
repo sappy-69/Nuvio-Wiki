@@ -13,12 +13,12 @@ On the surface, both give you streams. Underneath, they're not the same kind of 
 
 | | addons | Plugins |
 |---|---|---|
-| **Protocol** | Stremio's addon protocol — a manifest plus `catalog`/`meta`/`stream` HTTP endpoints | Nuvio's own plugin repository format |
-| **Where the logic runs** | On the addon developer's own server, entirely outside Nuvio | Inside Nuvio, on your device |
-| **What Nuvio actually does** | Sends an HTTP request, parses the JSON that comes back | Downloads the plugin's code and executes it |
-| **Hosting** | Wherever the developer deploys it — Beamup, a VPS, Cloudflare Workers, self-hosted | A manifest file, typically hosted on GitHub |
-| **Scope** | Can supply catalogs, metadata, subtitles, live TV, and debrid resolution — streams are one capability among several | Streams only |
-| **Portability** | Works in any Stremio-protocol client (Stremio itself, Nuvio, others) | Nuvio-specific; won't work in Stremio or other addon-protocol apps |
+| **Protocol** | Stremio's addon protocol (`catalog`/`meta`/`stream` HTTP endpoints) | Nuvio's own plugin repository format |
+| **Where the logic runs** | On the addon developer's remote server | Inside Nuvio, locally on your device |
+| **What Nuvio actually does** | Sends an HTTP request, parses the JSON response | Downloads the plugin's code and executes it in a sandboxed QuickJS runtime |
+| **Hosting** | Developer's infrastructure (Beamup, a VPS, Cloudflare Workers, ElfHosted) | A manifest file, typically hosted on GitHub |
+| **Scope** | Catalogs, metadata, subtitles, live TV, and streams | Streams only |
+| **Portability** | Works in any Stremio-protocol client (Stremio, Nuvio, others) | Nuvio-specific |
 
 The structural difference is the one that matters most: an addon is a contract. Nuvio calls out to a URL and trusts the response to follow the Stremio schema — this is also why existing Stremio addons like AIOStreams, Torrentio, or MediaFusion work in Nuvio without modification, and why Nuvio can treat metadata addons, subtitle addons, and stream addons as the same basic object with different capabilities declared in the manifest.
 
