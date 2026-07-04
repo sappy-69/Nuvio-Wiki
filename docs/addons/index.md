@@ -1,6 +1,6 @@
 # Addons
 
-Addons are the heart of the Nuvio experience. They provide the content, metadata, subtitles, and functionality that make the app useful. While Nuvio's [plugin](../plugins) system runs scraper code directly on your device, addons are remote web services that communicate with Nuvio using the standard Stremio addon protocol. Nuvio also has its own native debrid integration — a built-in system that resolves torrent hashes through your debrid account without needing an external addon to do it.
+Addons are the heart of the Nuvio experience. They provide the content, metadata, subtitles, and functionality that make the app useful. While Nuvio's [plugin](../plugins) system runs scraper Javascript directly on your device, addons are remote web services that communicate with Nuvio using the standard Stremio addon protocol. Nuvio also has its own native debrid integration — a built-in system that resolves torrent hashes through your debrid account without needing an external addon to do it.
 
 >[!WARNING]
 > This Wiki does not condone the use of any unlicensed copyrighted material.
@@ -52,7 +52,7 @@ Every addon has a `manifest.json` that declares its `id`, `name`, `version`, sup
 This is a distinct, built-in system — not an addon. While addons like AIOStreams can resolve debrid links on their server, Nuvio has its own debrid engine that does this locally on your device. Understanding the difference is critical to setting up your addons correctly.
 
 ### What It Does
-Nuvio's native debrid integration takes raw torrent hashes (from P2P addon results or plugin results) and resolves them through your linked debrid account directly. This means Nuvio itself calls the Torbox or Premiumize API to check the cache, create the torrent, select the file, and get a direct download link — all without an external addon touching your API key.
+Nuvio's native debrid integration takes raw magnet links (from P2P addon results or plugin results) and resolves them through your linked debrid account directly. This means Nuvio itself calls the Torbox or Premiumize API to check the cache, create the torrent, select the file, and get a direct download link — all without an external addon touching your API key.
 
 ### Supported Providers
 Nuvio's debrid integration currently supports two providers, **Torbox** and **Premiumize**.
@@ -162,7 +162,9 @@ While RPDB is a paid Patreon service, the developer provides several free-tier k
 These addons fetch subtitles for your content from various providers.
 
 | Addon | Configure URL |
-|---|---|
+| --- | --- |
+| **OpenSubtitles PRO** | [opensubtitlesv3-pro.dexter21767.com/configure/](https://opensubtitlesv3-pro.dexter21767.com/configure/) |
+| **Stremio Community Subtitles** | [stremio-community-subtitles.top](https://stremio-community-subtitles.top/) |
 | **SubSource** | [subsource.strem.top/configure](https://subsource.strem.top/configure) |
 | **SubDL** | [subdl.strem.top/configure](https://subdl.strem.top/configure) |
 | **SubSense** | [subsense.nepiraw.com/configure](https://subsense.nepiraw.com/configure) |
