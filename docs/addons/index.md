@@ -88,7 +88,7 @@ These addons find streaming sources for your movies and shows.
 
 #### AIOStreams
 
-AIOStreams is the most popular "super-addon" — it aggregates results from multiple underlying scrapers (Torrentio, Comet, Stremthru, and others) into a single, highly customizable feed. Because it is self-hostable, community members run their own instances:
+AIOStreams is the most popular "super-addon" — it aggregates results from multiple underlying scrapers (Meteor, Comet, Stremthru, and others) into a single, highly customizable feed. Because it is self-hostable, community members run their own instances:
 
 | Instance | Hosted By |
 |---|---|
