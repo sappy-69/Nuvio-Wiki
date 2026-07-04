@@ -60,8 +60,8 @@ Because provider code runs inside a constrained script runtime rather than as a 
 
 There's no in-app plugin store in the app-store sense — a plugin repository is just a manifest URL, so finding one means finding a URL from a source you're willing to trust. In practice, that comes from a few places:
 
-- **Nuvio Streams Discord** The best way to find plugins is [joining the Nuvio streams discord](https://discord.gg/7C994hfSy).
-- **Community-maintained repositories** shared on GitHub, usually as a public repo with a `manifest.json` you point Nuvio at directly.
+- **Nuvio Streams Discord** - The best way to find plugins. [Join here](https://discord.gg/7C994hfSy).
+- **Community-maintained repositories** - Shared on GitHub, usually as a public repo with a `manifest.json` you point Nuvio at directly.
 
 > [!CAUTION]
 > A plugin executes code on your device — that's a different risk profile than an addon, which only ever returns data. Only add repositories from sources you trust, and be aware that plugin availability and reliability change often as source sites and scrapers get blocked or shut down. Nuvio itself is a client only: it doesn't host, vet, or guarantee any third-party plugin, and you're responsible for using it in a way that complies with the laws in your jurisdiction.
