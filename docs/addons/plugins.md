@@ -103,11 +103,3 @@ This is the easier path for typing or pasting a long URL.
 - In Settings, the repository should show as enabled with a recent fetch/update timestamp rather than an error state.
 - If no providers appear after adding a repository, re-check that you enabled at least one provider inside it — the repository and its providers are toggled separately.
 
-### Troubleshooting
-
-- **"Manifest not recognized" or similar parsing error:** double-check the URL points directly at the manifest file (usually a raw GitHub URL ending in `.json`), not at a webpage that displays it.
-- **Repository added but no providers load:** the repository may be built for the pre-rewrite version of Nuvio — look for a recent update in the repository's own commit history before assuming your install is broken.
-- **Providers load but return no streams:** this is usually the provider's target source being down or blocked, not a Nuvio problem — try a different provider from the same repository if one is available.
-
-[Back to top](#Plugins)
-
