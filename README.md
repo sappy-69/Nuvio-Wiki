@@ -32,7 +32,7 @@ If you need something to help you get through this, here is a [1-hour Subway Sur
 ### ⚙️ Configuration & Integrations
 *   [Addons Guide](docs/addons/README.md) - Content, Metadata, and Utility addons.
 *   [Settings Breakdown](docs/settings/README.md) - General UI and settings info.
-*   [Player Settings](docs/settings/player.md) - Playback configuration.
+*   [Player Settings](docs/settings/player.md) - Playback configuration, including Buffer & Network / Native Memory / Parallel Connections on Android TV.
 *   [Debrid Integration](docs/integrations/debrid.md) - Link your Debrid services.
 *   [IMDb, MDBList, Trakt](docs/integrations/imdb-mdblist-trakt.md) - Account integrations.
 *   [Custom Collections](docs/settings/collections.md) - Create deep custom collections.
