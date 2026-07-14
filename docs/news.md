@@ -1,3 +1,37 @@
+## New Releases - 2026-07-14
+
+### Nuvio TV (0.7.16-beta)
+#### Catch Your Favorite Shows Without a Hitch
+- Got a problem watching your favorite series on Trakt? We've got some good news: you can now ignore old playback markers and the series icons should appear back on the Home screen.
+- Trakt users, rejoice! Your movie history is now organized in neat little pages, thanks to some behind-the-scenes pagination work.
+- Keeping track of your Trakt credentials is now easier, and they'll even sync across different clients, so you don't have to worry about signing in everywhere.
+- Need a reminder about what's new on your favorite platform? Periodic refresh supports mean you'll stay in the loop.
+- Got a problem with the loading indicator not working right? That's fixed!
+- Poster prefetch requests won't get stuck on empty images anymore, so you can see what's playing in style.
+- Some of you might have been watching Dolby Vision content without even knowing it. Now, only Dolby Vision tracks can override MIME types, so you get the best picture quality.
+- Stream chip loading badges now look consistent across your Nuvio experience.
+- Ever had a problem with our diagnostics tools? Now they'll send you more detailed reports so you can figure out what's going on.
+
+### Localization
+#### We're Speaking Your Language!
+- French translations just got a lot more polished!
+- Hebrew fans rejoice! We've got new translations just for you!
+- Get ready for the latest Spanish translations, straight from Latin America!
+- Greek and Italian translations are joining the party – expect more updates coming soon!
+
+### Nuvio Mobile (0.2.23)
+#### Make Your Nuvio Experience Pop!
+- Want to customize how your favorite cards look? You can now choose from various depth effects!
+- Oh no, your profile settings just got reset! Don't worry, this super-important fix makes sure that won't happen again.
+
+### Nuvio Desktop (0.1.13-alpha)
+#### Nuvio at Your Service
+- Fixed a tricky bug that made our windows webview go haywire – now everything should look just right.
+
+### Nuvio Web (0.3.13-beta)
+#### Keeping Things Smooth
+- Expect a smoother experience with the latest bug fixes. We're constantly working to make Nuvio Web the best it can be.
+---
 ## New Releases - 2026-07-13
 
 ### Nuvio TV (0.7.16-beta)
@@ -101,80 +135,3 @@ Get the latest update for Nuvio Web, with improved performance and stability:
 - The in-app diagnostics console on older webOS and Tizen versions has been improved, with reliable scrolling, page navigation, and legacy input events.
 - Hero artwork positioning and gradient rendering on older TV browsers have been fixed to prevent logos from being clipped or gradient issues.
 - Stream selection panels now render with transparent backgrounds on older TV browsers, restoring the intended appearance.
----
-## New Releases - 2026-07-11
-
-### Nuvio TV (0.7.16-beta)
-
-**What's New**
-
-Watchlist woes are now a thing of the past! We've fixed a pesky issue where watched series markers weren't showing up on the main Home page, and made Trakt more reliable by ignoring old watched playback data. You'll also appreciate the new pagination feature for fetching watched movies, Trakt credential syncing across devices, and periodic refresh support.
-
-**Other Fixes and Tweaks**
-
-We've made some behind-the-scenes changes to improve the overall experience:
-
-- The loading indicator now resets properly when you start playback.
-- We've squashed a bug that caused zero-size poster requests.
-- You can now override Dolby Vision MIME types with ease.
-- Our stream chip loading badge is now a consistent size, making it easier to use. 
-- And, to make troubleshooting easier, we're now sending diagnostic data when you report issues.
-
-### Localization
-
-**New Translations and Updates**
-
-Language lovers rejoice! We've added:
-
-- New French translations, using formal wording where needed.
-- Hebrew translations, with many new and updated strings.
-- Latin American Spanish localization strings, so you can find your favorite shows.
-- Greek strings, with English placeholders for missing translations.
-- Italian translations, so you can enjoy your favorite shows with friends.
-
-### Nuvio Mobile (0.2.21)
-
-**Mobile Fixes and Improvements**
-
-We've been working hard to resolve some issues on your mobile devices:
-
-- Fixed video playback rotation issues on iOS devices.
-- Improved memory allocation for better performance.
-- We're directing the MPVKit to the latest libmpv binary.
-- Our AudioUnit crash guard is now more robust.
-- Your Trakt credentials will now sync properly during playback.
-- Fixed an issue with stream continue watching metadata enrichment.
-- And, to top it off, we've made sure your Home catalog sync keys are preserved.
-
-### Nuvio Desktop (0.1.11-alpha)
-
-**Desktop Fixes and Performance Enhancements**
-
-We've been working hard to improve your desktop experience:
-
-- We've tweaked the buffer cache for better performance.
-- Fixed a compiling issue that was causing problems.
-- Our loading spinner now works as expected.
-- And, to make things easier to navigate, we've added scrollbars to the app.
-- Fixed a crash that was happening when browsing entities.
-- Wired up deeplinks to work within the desktop app.
-- And, to keep you up all night, we've fixed a display sleep issue on Windows.
-- Finally, we've aligned your addon and playback networking on desktop.
-
-### Nuvio Web (0.3.9-beta)
-
-**Web Updates and Fixes**
-
-We've been working on some significant updates for our web experience:
-
-- We've aligned our autoplay and source selection with Android TV, so you can find your next episode with ease.
-- Fixed an issue where completed episodes would start near the end of playback.
-- We've improved embedded subtitle handling on webOS and Tizen devices.
-- Fixed subtitle sizing on older Samsung Tizen TVs.
-- Improved playback reliability on webOS, so your screensaver can't interrupt you.
-- Fixed automatic audio-language selection when metadata was incorrect.
-- We've fixed Skip Intro so it stays hidden when you're done with it.
-- Restored stream badge preloading and caching for faster loading times.
-- Aligned quality sorting with Android TV by ordering streams by resolution, quality, and file size.
-- Fixed Trakt credential sync errors and improved synchronization with Nuvio Sync.
-- And, to top it off, we've improved Continue Watching synchronization when restoring or selecting profiles.
