@@ -1,3 +1,24 @@
+## New Releases - 2026-07-17
+
+### Nuvio TV (0.7.18)
+A row-focusing fix is coming your way. No more shimmer issues, and your TV will know exactly where to focus. This update is the result of a collaborative effort, and we say thanks to @skoruppa for their help in ironing out this glitch.
+
+### Nuvio Mobile (0.2.25)
+Android users, rejoice! Our updates are about to smooth out your navigation experience. We've disabled predictive back on Android to prevent those pesky navigation conflicts, and we no longer show a contribution summary on the mobile app - it's all part of our plan to make navigation a breeze. These fixes are thanks to the tireless efforts of @tapframe.
+
+### Nuvio Desktop (0.1.13-alpha)
+If you're using Nuvio Desktop on Windows, you might have noticed some layout issues after our recent nav3 migration. No worries, we've got this fixed! Our webview now accurately calculates the layout size, and everything should look perfect on your screen. Thanks to the developers who helped solve this glitch.
+
+### Nuvio Web (0.3.18-beta)
+Get ready for some exciting changes to Nuvio Web. We've made several key improvements and fixes to your overall viewing experience. Here are some highlights:
+- Navigating between rows on Samsung Tizen just got a whole lot smoother! Our update eliminates the problem of laggy navigation.
+- Audio and subtitle detection just got a boost for users of Brazilian Portuguese language. Our system can now recognize those regional codes and labels.
+- Audio selection got a priority boost too, ensuring that your preferred audio language is always selected first, followed by other options.
+- When choosing a subtitle language, your system will now wait for audio-track discovery, so your subtitles load in sync with your audio.
+- Subtitle activation got streamlined, so you won't accidentally turn subtitles on for languages that don't need them.
+- For LG webOS viewers, forced subtitles are now prioritized correctly, and we fix an issue that was causing audio-track selection to go awry.
+- Last but not least, any old or corrupted subtitles are now cleared out of your system when you switch between shows or close playback, so you won't be seeing any ghost subtitles. We've also fixed an issue that would apply the wrong saved playback position to the wrong episode. Our gratitude goes out to @WhiteGiso for these fantastic improvements!
+---
 ## New Releases - 2026-07-16
 
 ### Nuvio TV (0.7.16-beta)
@@ -105,37 +126,3 @@ Our web update brings a few behind-the-scenes fixes to keep you going:
 - **Profile Settings**: Secondary profiles can now access profile preferences, while primary profiles retain profile management restrictions.
 - **TMDB Metadata**: We've fixed issues with TMDB metadata, artwork, collections, and recommendations failing with incorrectly formatted regional language codes.
 - **Playback Persistence**: The selected stream ID and its source context are now retained for future playback and Continue Watching sessions.
----
-## New Releases - 2026-07-14
-
-### Nuvio TV (0.7.16-beta)
-#### Catch Your Favorite Shows Without a Hitch
-- Got a problem watching your favorite series on Trakt? We've got some good news: you can now ignore old playback markers and the series icons should appear back on the Home screen.
-- Trakt users, rejoice! Your movie history is now organized in neat little pages, thanks to some behind-the-scenes pagination work.
-- Keeping track of your Trakt credentials is now easier, and they'll even sync across different clients, so you don't have to worry about signing in everywhere.
-- Need a reminder about what's new on your favorite platform? Periodic refresh supports mean you'll stay in the loop.
-- Got a problem with the loading indicator not working right? That's fixed!
-- Poster prefetch requests won't get stuck on empty images anymore, so you can see what's playing in style.
-- Some of you might have been watching Dolby Vision content without even knowing it. Now, only Dolby Vision tracks can override MIME types, so you get the best picture quality.
-- Stream chip loading badges now look consistent across your Nuvio experience.
-- Ever had a problem with our diagnostics tools? Now they'll send you more detailed reports so you can figure out what's going on.
-
-### Localization
-#### We're Speaking Your Language!
-- French translations just got a lot more polished!
-- Hebrew fans rejoice! We've got new translations just for you!
-- Get ready for the latest Spanish translations, straight from Latin America!
-- Greek and Italian translations are joining the party – expect more updates coming soon!
-
-### Nuvio Mobile (0.2.23)
-#### Make Your Nuvio Experience Pop!
-- Want to customize how your favorite cards look? You can now choose from various depth effects!
-- Oh no, your profile settings just got reset! Don't worry, this super-important fix makes sure that won't happen again.
-
-### Nuvio Desktop (0.1.13-alpha)
-#### Nuvio at Your Service
-- Fixed a tricky bug that made our windows webview go haywire – now everything should look just right.
-
-### Nuvio Web (0.3.13-beta)
-#### Keeping Things Smooth
-- Expect a smoother experience with the latest bug fixes. We're constantly working to make Nuvio Web the best it can be.
