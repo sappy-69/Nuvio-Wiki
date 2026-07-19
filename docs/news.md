@@ -1,3 +1,29 @@
+## New Releases - 2026-07-19
+
+**Nuvio TV (0.7.18)**
+Shine On! Focus is Now Back Where It Should Be
+We've fixed a pesky issue where rows were losing focus and shimmering – it's now smooth sailing for your TV experience!
+
+**Nuvio Mobile (0.3.0)**
+New Features and Fixes to Love
+Our mobile app just got a whole lot better. We've made it easier to browse shows by adding a new catalog type option. You can now enjoy seamless playback with fixed issues like subtitle matching and audio-aware controls. Even the navigation bar has a fresh new look!
+
+Some other notable fixes include:
+
+* Preserving your download metadata and navigation layout
+* Matching overlays to the TV UI for a more unified experience
+* Updating the app language and strings for better accessibility
+* Restoring back gestures and navigation for a smooth iOS experience
+* And many more under-the-hood improvements
+
+**Nuvio Desktop (0.1.13-alpha)**
+Windows Users rejoice
+We've squashed a bug that was affecting the layout size of the Windows webview after the recent nav3 migration. Everything should now be working as it should, and your desktop experience will be as seamless as ever!
+
+**Nuvio Web (0.3.19-beta)**
+Staying Up-to-Date with the Latest from GitHub
+We've fixed some known issues with our GitHub integration, ensuring that everything runs smoothly on our web platform.
+---
 ## New Releases - 2026-07-18
 
 **Nuvio TV (0.7.18)**
@@ -36,49 +62,3 @@ Get ready for some exciting changes to Nuvio Web. We've made several key improve
 - Subtitle activation got streamlined, so you won't accidentally turn subtitles on for languages that don't need them.
 - For LG webOS viewers, forced subtitles are now prioritized correctly, and we fix an issue that was causing audio-track selection to go awry.
 - Last but not least, any old or corrupted subtitles are now cleared out of your system when you switch between shows or close playback, so you won't be seeing any ghost subtitles. We've also fixed an issue that would apply the wrong saved playback position to the wrong episode. Our gratitude goes out to @WhiteGiso for these fantastic improvements!
----
-## New Releases - 2026-07-16
-
-### Nuvio TV (0.7.16-beta)
-
-Catch up with your favorite shows and movies without any fuss! This update brings you:
-
-- A more reliable experience with Trakt, where episodes marked as watched will now show up on your Home page as expected.
-- A fix for missing series markers on the Home page.
-- Better loading times for watched movies.
-- The ability to sync your Trakt credentials across devices.
-- Automatic refreshes to keep your movies and shows in sync.
-- New loading indicators that behave as they should.
-- A fix for tiny movie posters that wouldn't load properly.
-- Better video quality control, ensuring Dolby Vision works as it should.
-- A visual refresh for stream loading badges.
-- And, behind the scenes, improved diagnostics to help us understand any issues you might encounter.
-
-### Localization
-
-Time to go international! Your Nuvio TV update also includes:
-
-- Fresh French translations that make you feel like you're in Paris.
-- A boost of new Hebrew translations to help users who speak the language.
-- Improved Latin American Spanish localization to make your experience more personalized.
-- Greek strings are now complete, with placeholders in case something's missing.
-- And, last but not least, Italian translations to help our Italian friends enjoy their movies.
-
-### Nuvio Mobile (0.2.25)
-
-Mobile users, rejoice! This update brings a few crucial fixes:
-
-- Your predictive back feature is now working as it should on Android devices.
-- Plus, a refactoring of the contribution summary to make things more tidy.
-
-### Nuvio Desktop (0.1.13-alpha)
-
-Don't worry, desktop users! We've got you covered with this tiny but vital update.
-
-- Your Windows desktop browser's web view should be calculating its layout size correctly now.
-
-### Nuvio Web (0.3.16-beta)
-
-Our web update brings a few behind-the-scenes fixes to keep you going:
-
-- Various tweaks to make your experience with Nuvio Web better and smoother.
