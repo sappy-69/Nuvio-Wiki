@@ -1,3 +1,57 @@
+## New Releases - 2026-07-21
+
+### Nuvio TV (0.7.19-beta)
+
+**Your TV Just Got a Whole Lot Better!**
+
+Here are the latest updates:
+- Fixed a few pesky issues with how your Nuvio TV connects to the internet and works with some devices.
+- Improved how we play Dolby Vision content, so it looks super sharp and bright.
+- You can now watch stuff on your Zidoo Z9X 8K device, yay!
+- We fixed some problems with episode release dates and air times, so you don't get confused.
+- You can expect a smooth Continue Watching experience with our new and improved reliability features.
+- Your profile will be safer and more secure, thanks to added protection against sneaky data leaks.
+- We fixed an annoying glitch where playback wouldn't pick up where you left off.
+- And, we added some neat new features like Upcoming Continue Watching rows and stable IDs for your favorite collections.
+
+### Localization
+
+**More Languages, More Love!**
+
+We added some missing Polish translations and improved support for Right-To-Left languages, so you can enjoy Nuvio in even more languages.
+
+### Nuvio Mobile (0.3.1)
+
+**Nuvio Goes Mobile!**
+
+Here's what's new:
+- Improved navigation by cleaning up the routes after you pop back to the home screen.
+- We integrated our Nuvio engine, making it faster and smoother.
+- Fixed a crash that happened when you recycled a bitmap in the Now Playing metadata.
+- We fixed some wonky setting headings, so it's easier to navigate.
+- Introducing a new shelf and grid layout for your library, plus an upcoming Continue Watching row.
+- You can now apply poster depth to remaining surfaces, and... split ABI support!
+
+### Nuvio Desktop (0.1.13-alpha)
+
+**Your Desktop Just Got Better!**
+
+We fixed a problem with the Windows webview layout calculation, so it should work seamlessly now.
+
+### Nuvio Web (0.3.20-beta)
+
+**Your Web Experience Just Got a Lot Sweeter!**
+
+Here are the updates:
+- We improved navigation on Samsung Tizen and other TV runtimes by avoiding that frustrating lag.
+- You'll now see a pre-start compatibility screen when your TV isn't supported, showing you the minimum requirements.
+- We improved adaptive-streaming reliability by packing assets locally and keeping lazy loading.
+- You can now pick your favorite audio tracks per title or profile.
+- The Next Episode overlay looks better now, showing the localized air date while preserving autoplay and playback guards.
+- We fixed some stuck hero information on Samsung Tizen, so now backdrop and logo preloading works.
+- Addon subtitles look more polished now on Samsung Tizen.
+- We made some icons more readable on white themes, and improved Continue Watching artwork metadata resolution. Last but not least, the Trakt window selector got an Android TV-style revamp!
+---
 ## New Releases - 2026-07-19
 
 **Nuvio TV (0.7.18)**
@@ -41,24 +95,3 @@ Desktop users, rejoice! We've ironed out a tricky issue with the Windows WebView
 **Nuvio Web (0.3.19-beta)**
 
 Nuvio Web users, you're in luck! We've squashed some bugs related to issues on GitHub, which should make the overall user experience more stable and enjoyable.
----
-## New Releases - 2026-07-17
-
-### Nuvio TV (0.7.18)
-A row-focusing fix is coming your way. No more shimmer issues, and your TV will know exactly where to focus. This update is the result of a collaborative effort, and we say thanks to @skoruppa for their help in ironing out this glitch.
-
-### Nuvio Mobile (0.2.25)
-Android users, rejoice! Our updates are about to smooth out your navigation experience. We've disabled predictive back on Android to prevent those pesky navigation conflicts, and we no longer show a contribution summary on the mobile app - it's all part of our plan to make navigation a breeze. These fixes are thanks to the tireless efforts of @tapframe.
-
-### Nuvio Desktop (0.1.13-alpha)
-If you're using Nuvio Desktop on Windows, you might have noticed some layout issues after our recent nav3 migration. No worries, we've got this fixed! Our webview now accurately calculates the layout size, and everything should look perfect on your screen. Thanks to the developers who helped solve this glitch.
-
-### Nuvio Web (0.3.18-beta)
-Get ready for some exciting changes to Nuvio Web. We've made several key improvements and fixes to your overall viewing experience. Here are some highlights:
-- Navigating between rows on Samsung Tizen just got a whole lot smoother! Our update eliminates the problem of laggy navigation.
-- Audio and subtitle detection just got a boost for users of Brazilian Portuguese language. Our system can now recognize those regional codes and labels.
-- Audio selection got a priority boost too, ensuring that your preferred audio language is always selected first, followed by other options.
-- When choosing a subtitle language, your system will now wait for audio-track discovery, so your subtitles load in sync with your audio.
-- Subtitle activation got streamlined, so you won't accidentally turn subtitles on for languages that don't need them.
-- For LG webOS viewers, forced subtitles are now prioritized correctly, and we fix an issue that was causing audio-track selection to go awry.
-- Last but not least, any old or corrupted subtitles are now cleared out of your system when you switch between shows or close playback, so you won't be seeing any ghost subtitles. We've also fixed an issue that would apply the wrong saved playback position to the wrong episode. Our gratitude goes out to @WhiteGiso for these fantastic improvements!
