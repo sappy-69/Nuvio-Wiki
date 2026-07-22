@@ -1,3 +1,38 @@
+## New Releases - 2026-07-22
+
+**Nuvio TV (0.7.19-beta)**
+
+Improvements & Fixes
+-----------------------
+
+Get ready for a smoother TV-watching experience! We've restored important features like SNI and TLS support, which will make our app work better on your network. This update also fixes a few pesky bugs that were making AFR (Auto-Refresh Feature) act wonky and Display Mode restoration stop working.
+
+To make your favorite shows even better, we've improved how we handle Dolby Vision Profile 5. Now, when you enable "Always Strip DV," it will work perfectly in the background. And, if you own a Zidoo Z9X 8K device, you might be happy to know that we've added recognition for this awesome device!
+
+We've also made some tweaks to episode release dates and airtimes, so they should now be showing up correctly. You'll find a new "Continue Watching" row when you navigate to upcoming episodes, and it will give you reliable recommendations to keep you entertained.
+
+**Nuvio Mobile (0.3.1)**
+
+Nuvio Mobile 0.3.1 is here with some exciting updates!
+
+This new version focuses on making navigation smoother, fixing some pesky bugs, and adding some awesome new features. For example, you can now browse through "Upcoming Continue Watching" episodes, and we've also introduced separate shelf and grid layouts to make your library experience more fun.
+
+Additionally, we've improved the app's design, fixing issues like poster depth and recycled bitmap crashes. And the cherry on top? We've integrated Nuvio Engine to give you an even better experience!
+
+**Nuvio Desktop (0.1.14-alpha)**
+
+Time to level up your desktop experience!
+
+We've made some key improvements to ensure a smooth player experience. Now, when you exit the app, it will no longer freeze, and subtitles will scroll smoothly without any issues. Plus, we've fixed some tricky bugs related to desktop fullscreen entry and native player shutdown.
+
+To give you a faster and more seamless experience, we've also ensured that our app no longer hangs on player launch, and we've bundled the player runtime with the app to make everything run more smoothly.
+
+**Nuvio Web (0.3.22-beta)**
+
+**Coming Soon...!**
+
+This version of Nuvio Web is a big behind-the-scenes update, but we can't wait to share some amazing improvements that are coming your way! Stay tuned for more information and a future update.
+---
 ## New Releases - 2026-07-21
 
 ### Nuvio TV (0.7.19-beta)
@@ -77,21 +112,3 @@ We've squashed a bug that was affecting the layout size of the Windows webview a
 **Nuvio Web (0.3.19-beta)**
 Staying Up-to-Date with the Latest from GitHub
 We've fixed some known issues with our GitHub integration, ensuring that everything runs smoothly on our web platform.
----
-## New Releases - 2026-07-18
-
-**Nuvio TV (0.7.18)**
-
-Get ready for a smoother viewing experience on Nuvio TV! We've fixed a pesky issue where rows of content were flickering and losing focus, which should make it easier to navigate and enjoy your favorite shows.
-
-**Nuvio Mobile (0.2.25)**
-
-Mobile users, listen up! We've made some important tweaks to Nuvio Mobile to improve your app experience. First, we've disabled predictive back on Android, so you won't accidentally skip to the wrong menu or scene. And, we've removed a confusing summary from the contributions page, making it easier to see what's going on.
-
-**Nuvio Desktop (0.1.13-alpha)**
-
-Desktop users, rejoice! We've ironed out a tricky issue with the Windows WebView, which should now accurately calculate the layout size after migrating to a new navigation system (nav3). This means your content should display correctly and be easier to interact with.
-
-**Nuvio Web (0.3.19-beta)**
-
-Nuvio Web users, you're in luck! We've squashed some bugs related to issues on GitHub, which should make the overall user experience more stable and enjoyable.
