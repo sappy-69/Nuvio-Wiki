@@ -1,3 +1,54 @@
+## New Releases - 2026-07-23
+
+### Nuvio TV (0.7.19-beta)
+### Improvements & Fixes
+
+TV just got a lot better. Here's what changed:
+- We fixed issues that might have stopped you from watching your favorite shows on some devices, especially those running untrusted SSL streams. Now, your streaming experience is more reliable.
+- The way your TV handles certain playback modes on some devices should now work as expected, so you can enjoy seamless viewing.
+- You can now watch content on new devices, including the Zidoo Z9X 8K. More choices, more fun!
+- If you have a favorite show that just got released, you can now see its air date and the exact time it's on.
+- We added a new "Continue Watching" row to help you pick up where you left off.
+- For security, we improved profile isolation, so your viewing data stays private.
+- If you switch profiles, your watching status should stay up-to-date now.
+- Don't worry if your settings get corrupted; we can now recover them.
+- Our item IDs are now super-stable, so you can enjoy a seamless experience.
+- Scrolling in the Classic mode should be smoother now.
+- When you try to log in, your tokens should be valid, and you won't encounter any errors.
+- For languages like Hebrew, subtitle rendering should now be perfect, including punctuation and mirrored parentheses.
+- The playback settings and trailer progress bar should be working as expected now.
+- Finally, we improved playback to be more responsive, so you can enjoy a better viewing experience.
+
+### Localization
+
+TV just got more global! Here's what changed:
+- We added some missing Polish translations so your favorite shows and movies are now available in your language.
+- For languages like Hebrew and others that read from right to left (RTL), we improved subtitle and UI localization so you can enjoy a better viewing experience.
+
+### Nuvio Mobile (0.3.1)
+Nuvio Mobile is getting better and better. Here's what changed:
+- Now, when you navigate to a new page, the old one is cleaned up nicely, so it doesn't affect your new session.
+- Nuvio Engine is now integrated into the app, making it more powerful and efficient.
+- If you encounter a recycled bitmap issue, don't worry; it's now fixed.
+- We improved settings so that headings are easier to read.
+- We added a separate "Continue Watching" row, just like on TV.
+- Poster depth is now applied seamlessly, making it more beautiful.
+- On library pages, you can now sort your shelves and grid layouts for easier navigation.
+- We also fixed a few more bugs and added support for split ABI.
+
+### Nuvio Desktop (0.1.14-alpha)
+Nuvio Desktop is getting more stable and efficient. Here's what changed:
+- We updated the Parental Guidance API, making sure your content is suitable for all ages.
+- Subtitle rails now scroll horizontally as expected.
+- Sometimes, the app would freeze when exiting the player – now it's fixed.
+- Player launching no longer freezes the UI thread, so you can enjoy smooth navigation.
+- When entering desktop fullscreen, the white border and flash are now gone.
+- Player shutdown is now safely bounded, so windows don't get stranded.
+- Finally, we fixed a macOS-specific issue where the player runtime used to lag.
+
+### Nuvio Web (0.3.23-beta)
+TV just got some behind-the-scenes improvements! Our developers fixed some errors and bugs that were affecting your viewing experience.
+---
 ## New Releases - 2026-07-22
 
 **Nuvio TV (0.7.19-beta)**
@@ -86,29 +137,3 @@ Here are the updates:
 - We fixed some stuck hero information on Samsung Tizen, so now backdrop and logo preloading works.
 - Addon subtitles look more polished now on Samsung Tizen.
 - We made some icons more readable on white themes, and improved Continue Watching artwork metadata resolution. Last but not least, the Trakt window selector got an Android TV-style revamp!
----
-## New Releases - 2026-07-19
-
-**Nuvio TV (0.7.18)**
-Shine On! Focus is Now Back Where It Should Be
-We've fixed a pesky issue where rows were losing focus and shimmering – it's now smooth sailing for your TV experience!
-
-**Nuvio Mobile (0.3.0)**
-New Features and Fixes to Love
-Our mobile app just got a whole lot better. We've made it easier to browse shows by adding a new catalog type option. You can now enjoy seamless playback with fixed issues like subtitle matching and audio-aware controls. Even the navigation bar has a fresh new look!
-
-Some other notable fixes include:
-
-* Preserving your download metadata and navigation layout
-* Matching overlays to the TV UI for a more unified experience
-* Updating the app language and strings for better accessibility
-* Restoring back gestures and navigation for a smooth iOS experience
-* And many more under-the-hood improvements
-
-**Nuvio Desktop (0.1.13-alpha)**
-Windows Users rejoice
-We've squashed a bug that was affecting the layout size of the Windows webview after the recent nav3 migration. Everything should now be working as it should, and your desktop experience will be as seamless as ever!
-
-**Nuvio Web (0.3.19-beta)**
-Staying Up-to-Date with the Latest from GitHub
-We've fixed some known issues with our GitHub integration, ensuring that everything runs smoothly on our web platform.
