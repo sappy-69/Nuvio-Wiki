@@ -1,3 +1,23 @@
+## New Releases - 2026-07-24
+
+### Nuvio TV (0.7.19-beta)
+
+- **Improved Streaming** - Now Nuvio TV can work better with some internet services and DNS providers ( IPv4-first and SNI/TLS 1.3 support). You might have noticed your stream would skip or break up sometimes; this update will hopefully fix those problems.
+- **Episode Fix and More** - You can now see exact release dates for episodes and the app will remember where you left off in some of your favorite shows.
+- **New Upcoming Features** - Nuvio now shows a special row where you can find upcoming episodes in your favorite shows and the watch history is more reliable.
+- **Device Friendliness** - Nuvio TV has officially been approved to work on Zidoo Z9X 8K device, so go ahead and try it out.
+- **Profile Protection** - Your watch history will now stay protected across different user profiles.
+- **Subtitle Fix for Non-English Users** - Subtitle rendering should work better for languages like Hebrew, and some layout issues should be fixed as well.
+- **More Settings Recovery** - You'll now have some protection with your settings in case you accidentally corrupt your app file.
+- **Collection Sorting** - You can now sort items in the Collection Editor and Grid View.
+- **Fast Scrolling** - Fast scrolling should work smoother in Classic mode.
+- **More Stability and Bug Fixes** - Some bugs like rejected Trakt refresh tokens should now be fixed for better performance.
+
+### Localization
+
+- **More Polish Translations** - More Polish translations are now added to the app.
+- **International Subtitles** - Subtitles and UI localization handling for Hebrew and related languages have been updated.
+---
 ## New Releases - 2026-07-23
 
 ### Nuvio TV (0.7.19-beta)
@@ -83,57 +103,3 @@ To give you a faster and more seamless experience, we've also ensured that our a
 **Coming Soon...!**
 
 This version of Nuvio Web is a big behind-the-scenes update, but we can't wait to share some amazing improvements that are coming your way! Stay tuned for more information and a future update.
----
-## New Releases - 2026-07-21
-
-### Nuvio TV (0.7.19-beta)
-
-**Your TV Just Got a Whole Lot Better!**
-
-Here are the latest updates:
-- Fixed a few pesky issues with how your Nuvio TV connects to the internet and works with some devices.
-- Improved how we play Dolby Vision content, so it looks super sharp and bright.
-- You can now watch stuff on your Zidoo Z9X 8K device, yay!
-- We fixed some problems with episode release dates and air times, so you don't get confused.
-- You can expect a smooth Continue Watching experience with our new and improved reliability features.
-- Your profile will be safer and more secure, thanks to added protection against sneaky data leaks.
-- We fixed an annoying glitch where playback wouldn't pick up where you left off.
-- And, we added some neat new features like Upcoming Continue Watching rows and stable IDs for your favorite collections.
-
-### Localization
-
-**More Languages, More Love!**
-
-We added some missing Polish translations and improved support for Right-To-Left languages, so you can enjoy Nuvio in even more languages.
-
-### Nuvio Mobile (0.3.1)
-
-**Nuvio Goes Mobile!**
-
-Here's what's new:
-- Improved navigation by cleaning up the routes after you pop back to the home screen.
-- We integrated our Nuvio engine, making it faster and smoother.
-- Fixed a crash that happened when you recycled a bitmap in the Now Playing metadata.
-- We fixed some wonky setting headings, so it's easier to navigate.
-- Introducing a new shelf and grid layout for your library, plus an upcoming Continue Watching row.
-- You can now apply poster depth to remaining surfaces, and... split ABI support!
-
-### Nuvio Desktop (0.1.13-alpha)
-
-**Your Desktop Just Got Better!**
-
-We fixed a problem with the Windows webview layout calculation, so it should work seamlessly now.
-
-### Nuvio Web (0.3.20-beta)
-
-**Your Web Experience Just Got a Lot Sweeter!**
-
-Here are the updates:
-- We improved navigation on Samsung Tizen and other TV runtimes by avoiding that frustrating lag.
-- You'll now see a pre-start compatibility screen when your TV isn't supported, showing you the minimum requirements.
-- We improved adaptive-streaming reliability by packing assets locally and keeping lazy loading.
-- You can now pick your favorite audio tracks per title or profile.
-- The Next Episode overlay looks better now, showing the localized air date while preserving autoplay and playback guards.
-- We fixed some stuck hero information on Samsung Tizen, so now backdrop and logo preloading works.
-- Addon subtitles look more polished now on Samsung Tizen.
-- We made some icons more readable on white themes, and improved Continue Watching artwork metadata resolution. Last but not least, the Trakt window selector got an Android TV-style revamp!
