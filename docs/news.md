@@ -1,3 +1,52 @@
+## New Releases - 2026-07-25
+
+### Nuvio TV (0.7.19-beta)
+
+**New Features and Fixes**
+
+- TV users rejoice! You can now watch Dolby Vision Profile 5 content, including on Zidoo Z9X 8K devices, and the episodes on your favorite shows will have accurate release dates and airtimes.
+- Don't worry about your "Continue Watching" row getting lost in space. We've also made sure it's reliable and stays up to date.
+- If you switch profiles, you won't see your Continue Watching or watched badges leak into the other profile. That's not very personal, right?
+- Auto-next playback after profile changes should now work as expected, and your preference settings will be backed up to keep them safe from file corruption.
+- If you want to customize what appears on your screen, you can now save your Collection Editor and Grid View settings with stable IDs.
+- Your screen will shine brighter with improved Classic mode vertical fast scrolling and lost shimmer focus in collections.
+- No more rejected Trakt refresh tokens for you! We've also fixed subtitle rendering for right-to-left languages, including Hebrew.
+- We've polished RTL playback settings sliders, trailer progress, and remaining-time layouts for a more refined experience.
+
+**Localization**
+
+- TV users in Poland, you might have noticed some missing translations; they're now in place.
+- We've also updated translation handling for Hebrew and related languages, so your experience is smoother in the right-to-left world.
+
+### Nuvio Mobile (0.3.1)
+
+- **Mobile Navigation**: We made some tweaks to how you navigate through routes on your mobile device.
+- **Nuvio Engine Integration**: Get ready to experience Nuvio Engine's advanced features on the go.
+- **Recycled Bitmap Crash Fix**: No more crashes when trying to view Now Playing metadata!
+- **Settings Simplification**: We've rearranged section headings for clarity and ease-of-use.
+- **New Upcoming Continue Watching Row**: You can now track what's up next in your viewing history.
+- **Improve Poster Depth**: Visual enhancements for your viewing experience.
+- **Library Shelf and Grid Layouts**: Browse your library in style with new shelf and grid layouts.
+- **Support for Split ABI**: Behind-the-scenes optimization for better performance.
+
+### Nuvio Desktop (0.1.14-alpha)
+
+- **Parental Guidance Update**: Upstream update for Parental Guidance features, ensuring a safer experience.
+- **Subtitle Rail Fix**: No more horizontal scrolling when viewing subtitles!
+- **Prevent App Freeze**: We've improved app stability to prevent freezing during player exit.
+- **Player Launch Fix**: No more UI thread hang-ups when launching the player.
+- **White Border Fix**: Say goodbye to the annoying white border and flash when entering desktop fullscreen.
+- **Native Player Shutdown**: We've bound player shutdown to prevent stranding windows.
+
+### Nuvio Web (0.3.24-beta)
+
+**Improvements & Fixes**
+
+- **Installer Update Fix**: Samsung Tizen installer updates should now work smoothly, without the "Author certificate not match" error.
+- **Continue Watching Stream Reuse**: Your Continue Watching stream will now be matched even when provider URLs change.
+- **Home Trailer Startup**: Experience improved trailer playback with a smoother reveal after the first frame and disabled YouTube captions.
+- **Simplified Advanced Settings**: We've removed the obsolete "Remember Last Profile" option to simplify your Advanced settings.
+---
 ## New Releases - 2026-07-24
 
 ### Nuvio TV (0.7.19-beta)
@@ -68,38 +117,3 @@ Nuvio Desktop is getting more stable and efficient. Here's what changed:
 
 ### Nuvio Web (0.3.23-beta)
 TV just got some behind-the-scenes improvements! Our developers fixed some errors and bugs that were affecting your viewing experience.
----
-## New Releases - 2026-07-22
-
-**Nuvio TV (0.7.19-beta)**
-
-Improvements & Fixes
------------------------
-
-Get ready for a smoother TV-watching experience! We've restored important features like SNI and TLS support, which will make our app work better on your network. This update also fixes a few pesky bugs that were making AFR (Auto-Refresh Feature) act wonky and Display Mode restoration stop working.
-
-To make your favorite shows even better, we've improved how we handle Dolby Vision Profile 5. Now, when you enable "Always Strip DV," it will work perfectly in the background. And, if you own a Zidoo Z9X 8K device, you might be happy to know that we've added recognition for this awesome device!
-
-We've also made some tweaks to episode release dates and airtimes, so they should now be showing up correctly. You'll find a new "Continue Watching" row when you navigate to upcoming episodes, and it will give you reliable recommendations to keep you entertained.
-
-**Nuvio Mobile (0.3.1)**
-
-Nuvio Mobile 0.3.1 is here with some exciting updates!
-
-This new version focuses on making navigation smoother, fixing some pesky bugs, and adding some awesome new features. For example, you can now browse through "Upcoming Continue Watching" episodes, and we've also introduced separate shelf and grid layouts to make your library experience more fun.
-
-Additionally, we've improved the app's design, fixing issues like poster depth and recycled bitmap crashes. And the cherry on top? We've integrated Nuvio Engine to give you an even better experience!
-
-**Nuvio Desktop (0.1.14-alpha)**
-
-Time to level up your desktop experience!
-
-We've made some key improvements to ensure a smooth player experience. Now, when you exit the app, it will no longer freeze, and subtitles will scroll smoothly without any issues. Plus, we've fixed some tricky bugs related to desktop fullscreen entry and native player shutdown.
-
-To give you a faster and more seamless experience, we've also ensured that our app no longer hangs on player launch, and we've bundled the player runtime with the app to make everything run more smoothly.
-
-**Nuvio Web (0.3.22-beta)**
-
-**Coming Soon...!**
-
-This version of Nuvio Web is a big behind-the-scenes update, but we can't wait to share some amazing improvements that are coming your way! Stay tuned for more information and a future update.
