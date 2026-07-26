@@ -1,3 +1,41 @@
+## New Releases - 2026-07-26
+
+### Nuvio TV (0.7.20-beta)
+
+- **Watch Your Favorites in Latin American Spanish**: Our Nuvio TV app now supports language normalization for Latin American Spanish trailers on The Movie Database (TMDB). You can enjoy your favorite shows and movies with subtitles and audio in your preferred language.
+- **Fewer Glitches, More Fun**: We fixed some pesky issues that were causing problems like duplicate fetch responses, stuck autoloaders, and unexpected behavior. Our app should be more stable and enjoyable for you now.
+- **Time for a Change**: If you're a fan of watching movies and shows in languages that read from right to left (RTL), you'll appreciate the changes we made to display time left. No more confusing times, just a clean and easy-to-read interface.
+- **New Features to Explore**: We added MyAnimeList (MAL) ratings from MDBList API, live search while typing, and more cloud library features. Now you can easily find and watch your favorite anime shows.
+- **More Control, Less Stress**: Our app now prevents unexpected auto resume on transient lifecycle events, keeps your player session consistent, and fixes issues with grid view card consistency and meta cache TTL.
+
+### Localization
+
+- **Say Hello to Czech, Hebrew, and Portuguese Translations**: We've updated translations for Czech, Hebrew, and Portuguese (Brazil), so you can enjoy Nuvio in more languages. Our Slovak translations have also received some exciting improvements.
+- **Slovak Language Update**: Big shoutout to the Slovak translators who have worked hard to improve our app's translations. Their efforts will make Nuvio even more accessible to Slovak-speaking users.
+
+### Nuvio Mobile (0.3.1)
+
+- **Nuvio Engine is Here**: We've integrated the Nuvio Engine into our mobile app, bringing you faster navigation, better performance, and an overall improved user experience. Get ready to explore your favorite shows and movies like never before!
+- **Navigation, Settings, and More**: Our mobile app has received some fantastic updates, including a new navigation system, improved settings, and more. Enjoy a cleaner and more organized app that's easier to use.
+- **Upcoming and Now Playing**: We've added a separate upcoming continue watching row and improved metadata for your Now Playing content. Our mobile app now offers more features and a better way to discover new shows and movies.
+- **Grid and Shelf Layouts**: Get ready to explore your library in a whole new way! Our mobile app now supports sortable shelf and grid layouts, making it easier to find and watch your favorite content.
+- **Android Split ABI Support**: Our mobile app can now run on Android devices with split ABI (Application Binary Interface) support, providing better compatibility and performance.
+
+### Nuvio Desktop (0.1.14-alpha)
+
+- **Parental Guidance API Update**: We've updated our Parental Guidance API to ensure the app works smoothly and offers the best possible experience for adult and family-friendly content.
+- **Subtitle Rail Fix and Improved Performance**: We've fixed the subtitle rail horizontal scrolling issue and improved player exit behavior, making it more stable and enjoyable for users.
+- **UI Thread Optimization**: We've optimized our UI thread to prevent the player launch from hanging the app, ensuring a seamless experience for users.
+- **Desktop Fullscreen Fix**: We've fixed white border and flash issues when entering desktop fullscreen, providing a cleaner and more immersive experience.
+- **Native Player Shutdown Fix**: We've bound the native player shutdown to prevent it from stranding its windows, keeping the app stable and responsive.
+
+### Nuvio Web (0.3.24-beta)
+
+- **Samsung Tizen Installer Fix**: We've fixed issues with Samsung Tizen installer updates, so you can easily install and update Nuvio on your Samsung TV without any problems.
+- **Continue Watching Stream Reuse**: Our web app now improves Continue Watching stream reuse, making it easier to continue watching content from where you left off, even if the source provider URLs change.
+- **Improved Home Trailer Startup**: We've optimized home trailer startup to reveal playback after the first frame and keep YouTube captions disabled, providing a more enjoyable user experience.
+- **Simplified Advanced Settings**: We've simplified Advanced settings by removing the obsolete Remember Last Profile option, making it easier for users to customize their app settings.
+---
 ## New Releases - 2026-07-25
 
 ### Nuvio TV (0.7.19-beta)
@@ -66,54 +104,3 @@
 
 - **More Polish Translations** - More Polish translations are now added to the app.
 - **International Subtitles** - Subtitles and UI localization handling for Hebrew and related languages have been updated.
----
-## New Releases - 2026-07-23
-
-### Nuvio TV (0.7.19-beta)
-### Improvements & Fixes
-
-TV just got a lot better. Here's what changed:
-- We fixed issues that might have stopped you from watching your favorite shows on some devices, especially those running untrusted SSL streams. Now, your streaming experience is more reliable.
-- The way your TV handles certain playback modes on some devices should now work as expected, so you can enjoy seamless viewing.
-- You can now watch content on new devices, including the Zidoo Z9X 8K. More choices, more fun!
-- If you have a favorite show that just got released, you can now see its air date and the exact time it's on.
-- We added a new "Continue Watching" row to help you pick up where you left off.
-- For security, we improved profile isolation, so your viewing data stays private.
-- If you switch profiles, your watching status should stay up-to-date now.
-- Don't worry if your settings get corrupted; we can now recover them.
-- Our item IDs are now super-stable, so you can enjoy a seamless experience.
-- Scrolling in the Classic mode should be smoother now.
-- When you try to log in, your tokens should be valid, and you won't encounter any errors.
-- For languages like Hebrew, subtitle rendering should now be perfect, including punctuation and mirrored parentheses.
-- The playback settings and trailer progress bar should be working as expected now.
-- Finally, we improved playback to be more responsive, so you can enjoy a better viewing experience.
-
-### Localization
-
-TV just got more global! Here's what changed:
-- We added some missing Polish translations so your favorite shows and movies are now available in your language.
-- For languages like Hebrew and others that read from right to left (RTL), we improved subtitle and UI localization so you can enjoy a better viewing experience.
-
-### Nuvio Mobile (0.3.1)
-Nuvio Mobile is getting better and better. Here's what changed:
-- Now, when you navigate to a new page, the old one is cleaned up nicely, so it doesn't affect your new session.
-- Nuvio Engine is now integrated into the app, making it more powerful and efficient.
-- If you encounter a recycled bitmap issue, don't worry; it's now fixed.
-- We improved settings so that headings are easier to read.
-- We added a separate "Continue Watching" row, just like on TV.
-- Poster depth is now applied seamlessly, making it more beautiful.
-- On library pages, you can now sort your shelves and grid layouts for easier navigation.
-- We also fixed a few more bugs and added support for split ABI.
-
-### Nuvio Desktop (0.1.14-alpha)
-Nuvio Desktop is getting more stable and efficient. Here's what changed:
-- We updated the Parental Guidance API, making sure your content is suitable for all ages.
-- Subtitle rails now scroll horizontally as expected.
-- Sometimes, the app would freeze when exiting the player – now it's fixed.
-- Player launching no longer freezes the UI thread, so you can enjoy smooth navigation.
-- When entering desktop fullscreen, the white border and flash are now gone.
-- Player shutdown is now safely bounded, so windows don't get stranded.
-- Finally, we fixed a macOS-specific issue where the player runtime used to lag.
-
-### Nuvio Web (0.3.23-beta)
-TV just got some behind-the-scenes improvements! Our developers fixed some errors and bugs that were affecting your viewing experience.
