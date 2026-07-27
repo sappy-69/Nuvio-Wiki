@@ -1,3 +1,64 @@
+## New Releases - 2026-07-27
+
+**Nuvio TV (0.7.20-beta)**
+
+Get ready to enjoy your favorite shows and movies with our latest TV update! Here's what we've got in store for you:
+
+* We've improved our language support for Latin American Spanish trailers on TMDB, so you won't miss out on the latest content.
+* Some technical fixes were made to prevent duplicate fetch response header values. This should make things run smoother and faster for you.
+* We've also tackled some sticky issues, including stuck external auto-next loader and autoplay problems, which should help you avoid frustrations when watching your favorite shows.
+* Time left display has been updated for right-to-left (RTL) layouts, making it easier for all users to navigate your shows.
+* SurfaceFlinger HWC overlay and VSYNC timing have also been improved for a better viewing experience.
+* Your anime ratings from MyAnimeList (MAL) will now be synced with MDBList API, so you can track your progress easily.
+* Live search has been enabled while typing, giving you a more interactive and convenient experience.
+* We've also fixed some inconsistencies with grid view cards, All tab reshuffling, and meta cache TTL, so everything should look and feel more polished.
+
+**Localization**
+
+Here are some language updates that might interest you:
+
+* Czech, Hebrew, Portuguese (Brazil), and Slovak translations have been updated for better support and a more intuitive experience.
+* Slovak language also got some translation improvements, making it easier to explore your content.
+
+**Nuvio Mobile (0.3.1)**
+
+Get the latest mobile updates and enjoy a smoother, more enjoyable experience:
+
+* We've improved navigation and deferred route cleanup until the pop operation completes, giving you a seamless experience when switching between menus.
+* Nuvio Engine has been integrated for better performance and stability.
+* A recycled bitmap crash in Now Playing metadata has been fixed, so you can watch your shows without interruptions.
+* Section headings in settings have been normalized for a more consistent and user-friendly interface.
+* We've added a separate upcoming continue watching row for easy access to your next shows.
+* Poster depth has been applied to remaining surfaces, enhancing the overall visual appeal.
+* A split ABI has been supported for improved performance and compatibility.
+
+**Nuvio Desktop (0.1.14-alpha)**
+
+Our latest desktop update includes some exciting improvements:
+
+* The Parental Guidance API has been updated upstream for better support and accuracy.
+* The player subtitle rail has been fixed to prevent horizontal scrolling, giving you a more streamlined viewing experience.
+* The app has been fixed to stop freezing when exiting the player, so you can switch between apps seamlessly.
+* The player launch has been optimized to prevent hanging the UI thread, making things run smoothly.
+* The desktop fullscreen mode has been fixed to remove white border and flash issues, giving you an immersive viewing experience.
+* The native player shutdown has been bounded to prevent its windows from being stranded, ensuring a clean exit.
+
+**Nuvio Web (0.3.25-beta)**
+
+Catch up with the latest web update and enjoy a more intuitive and enjoyable experience:
+
+* Loading indicators have been aligned across Web TV with Android TV’s shared 12-segment design, covering various features and menus.
+* Buffering feedback has been improved by showing the shared loading indicator immediately when playback stalls, while preserving essential features like startup, seeking, error, and external-player safeguards.
+* LG webOS startup audio selection has been improved by keeping track discovery active for a bounded window and preserving supported tracks.
+* The modern sidebar blur has been enabled on capable LG webOS televisions running Chromium 120 or newer, while keeping it disabled on unsupported and legacy runtimes.
+* Trailer captions have been fixed to prevent reappearing after YouTube player state changes, preserving your preferences.
+* Disabled add-ons have been fixed to prevent being re-enabled after profile or device synchronization, ensuring your settings are preserved and synced correctly.
+* Subtitle discovery for Anime Kitsu and other non-IMDb sources has been improved by resolving exact unique Cinemeta matches and building addon-compatible episode IDs without replacing the original source identity.
+* The Android TV-style “Play manually” action has been added to title and episode menus for a more interactive and convenient experience.
+* Skip Intro, Skip Outro, and primary detail actions have been fixed to use correct focus colors with custom themes, making it easier to navigate your content.
+* Library focus restoration has been improved to prevent browser focus from unexpectedly scrolling the content, giving you a smoother experience.
+* CVE-2026-32141 and CVE-2026-33228 have been resolved by pinning flatted 3.4.2 across the dependency tree and cleaning stale lockfile entries, ensuring your security and stability.
+---
 ## New Releases - 2026-07-26
 
 ### Nuvio TV (0.7.20-beta)
@@ -84,23 +145,3 @@
 - **Continue Watching Stream Reuse**: Your Continue Watching stream will now be matched even when provider URLs change.
 - **Home Trailer Startup**: Experience improved trailer playback with a smoother reveal after the first frame and disabled YouTube captions.
 - **Simplified Advanced Settings**: We've removed the obsolete "Remember Last Profile" option to simplify your Advanced settings.
----
-## New Releases - 2026-07-24
-
-### Nuvio TV (0.7.19-beta)
-
-- **Improved Streaming** - Now Nuvio TV can work better with some internet services and DNS providers ( IPv4-first and SNI/TLS 1.3 support). You might have noticed your stream would skip or break up sometimes; this update will hopefully fix those problems.
-- **Episode Fix and More** - You can now see exact release dates for episodes and the app will remember where you left off in some of your favorite shows.
-- **New Upcoming Features** - Nuvio now shows a special row where you can find upcoming episodes in your favorite shows and the watch history is more reliable.
-- **Device Friendliness** - Nuvio TV has officially been approved to work on Zidoo Z9X 8K device, so go ahead and try it out.
-- **Profile Protection** - Your watch history will now stay protected across different user profiles.
-- **Subtitle Fix for Non-English Users** - Subtitle rendering should work better for languages like Hebrew, and some layout issues should be fixed as well.
-- **More Settings Recovery** - You'll now have some protection with your settings in case you accidentally corrupt your app file.
-- **Collection Sorting** - You can now sort items in the Collection Editor and Grid View.
-- **Fast Scrolling** - Fast scrolling should work smoother in Classic mode.
-- **More Stability and Bug Fixes** - Some bugs like rejected Trakt refresh tokens should now be fixed for better performance.
-
-### Localization
-
-- **More Polish Translations** - More Polish translations are now added to the app.
-- **International Subtitles** - Subtitles and UI localization handling for Hebrew and related languages have been updated.
