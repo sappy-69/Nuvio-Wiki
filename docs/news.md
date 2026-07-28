@@ -1,3 +1,51 @@
+## New Releases - 2026-07-28
+
+**Nuvio TV (0.7.20-beta)**
+
+- Get ready to groove to Latin American Spanish trailers in style - they're now properly displayed with language normalization!
+- No more duplicates: we've squashed the issue with duplicate fetch response header values.
+- Our tech wizards have been hard at work fixing some sneaky Sentry crashes - thanks for the fixes @skoruppa!
+- Autoplay and auto-next loader issues are a thing of the past - you can now back out without getting stuck.
+- In right-to-left layouts, time is now displayed in a logical order - thanks for pointing that out @haveAnIssue!
+- We've improved video performance by tweaking SurfaceFlinger HWC overlays and VSYNC timing - and fixed some preflight probe shenanigans.
+- Give MyAnimeList (MAL) ratings a try - we've added them to the mix using the MDBList API with @guuilp's magic.
+- Live search is now live - try typing away and see what shows up!
+- Media Session tears-down and gets re-constructed without causing a feedback loop - stability win!
+- Find what you need faster - search the cloud library right from the library tab!
+- We've updated okhttp and OpenSubtitlesHasher with keep-alive magic - and fixed an unexpected auto-resume issue.
+- Card consistency is now top-notch, and meta cache TTL is working as expected - thanks for the fixes @skoruppa!
+- Numbers now work correctly, including hours in right-to-left views - another @haveAnIssue fix!
+
+**Localization**
+
+- Czech translations are now up-to-date - thanks for the updates @SnaexCZ!
+- Hebrew translations have been updated, and Portuguese translations for Brazil and Portugal have also been improved - cheers for the work @haveAnIssue and @danilopagotto82!
+- Slovak translations have seen some love - thanks for the translation improvements @mmsw91!
+
+**Nuvio Mobile (0.3.2)**
+
+- You can now register your device with our official client - no more worries about authorization!
+- Our Play account integration is compliant with foreground service guidelines - we've got our ducks in a row!
+- A minor but lovely tweak: the CardDepthEffect sheen overlay is now clipped to its shape path - more polished visuals!
+- Say goodbye to the catalog header accent line - it's been refactored away!
+- Cloud library search is now live on mobile - go ahead and search!
+- MyAnimeList (MAL) ratings have arrived on mobile - thanks @guuilp!
+- Profile isolation has been improved for Trakt auth and storage - safer, more secure!
+- And, to wrap it all up, subtitle rendering on images is now working like a charm - no more glitches!
+
+**Nuvio Desktop (0.1.14-alpha)**
+
+- Our parental guidance API has been updated - we're now in line with the upstream version!
+- Subtitle rail horizontal scrolling has been removed - a more fluid experience!
+- App freezes on exit? Gone - we've disposes of the native player on the EDT!
+- No more UI thread hanging - the player launch is now offloaded!
+- White borders and flashes? History - we've fixed them when entering desktop fullscreen!
+- Native player shutdown is now bounded - no more stranded windows!
+
+**Nuvio Web (0.3.26-beta)**
+
+- We've fixed a bunch of issues to make your experience on Nuvio Web smoother - enjoy!
+---
 ## New Releases - 2026-07-27
 
 **Nuvio TV (0.7.20-beta)**
@@ -96,52 +144,3 @@ Catch up with the latest web update and enjoy a more intuitive and enjoyable exp
 - **Continue Watching Stream Reuse**: Our web app now improves Continue Watching stream reuse, making it easier to continue watching content from where you left off, even if the source provider URLs change.
 - **Improved Home Trailer Startup**: We've optimized home trailer startup to reveal playback after the first frame and keep YouTube captions disabled, providing a more enjoyable user experience.
 - **Simplified Advanced Settings**: We've simplified Advanced settings by removing the obsolete Remember Last Profile option, making it easier for users to customize their app settings.
----
-## New Releases - 2026-07-25
-
-### Nuvio TV (0.7.19-beta)
-
-**New Features and Fixes**
-
-- TV users rejoice! You can now watch Dolby Vision Profile 5 content, including on Zidoo Z9X 8K devices, and the episodes on your favorite shows will have accurate release dates and airtimes.
-- Don't worry about your "Continue Watching" row getting lost in space. We've also made sure it's reliable and stays up to date.
-- If you switch profiles, you won't see your Continue Watching or watched badges leak into the other profile. That's not very personal, right?
-- Auto-next playback after profile changes should now work as expected, and your preference settings will be backed up to keep them safe from file corruption.
-- If you want to customize what appears on your screen, you can now save your Collection Editor and Grid View settings with stable IDs.
-- Your screen will shine brighter with improved Classic mode vertical fast scrolling and lost shimmer focus in collections.
-- No more rejected Trakt refresh tokens for you! We've also fixed subtitle rendering for right-to-left languages, including Hebrew.
-- We've polished RTL playback settings sliders, trailer progress, and remaining-time layouts for a more refined experience.
-
-**Localization**
-
-- TV users in Poland, you might have noticed some missing translations; they're now in place.
-- We've also updated translation handling for Hebrew and related languages, so your experience is smoother in the right-to-left world.
-
-### Nuvio Mobile (0.3.1)
-
-- **Mobile Navigation**: We made some tweaks to how you navigate through routes on your mobile device.
-- **Nuvio Engine Integration**: Get ready to experience Nuvio Engine's advanced features on the go.
-- **Recycled Bitmap Crash Fix**: No more crashes when trying to view Now Playing metadata!
-- **Settings Simplification**: We've rearranged section headings for clarity and ease-of-use.
-- **New Upcoming Continue Watching Row**: You can now track what's up next in your viewing history.
-- **Improve Poster Depth**: Visual enhancements for your viewing experience.
-- **Library Shelf and Grid Layouts**: Browse your library in style with new shelf and grid layouts.
-- **Support for Split ABI**: Behind-the-scenes optimization for better performance.
-
-### Nuvio Desktop (0.1.14-alpha)
-
-- **Parental Guidance Update**: Upstream update for Parental Guidance features, ensuring a safer experience.
-- **Subtitle Rail Fix**: No more horizontal scrolling when viewing subtitles!
-- **Prevent App Freeze**: We've improved app stability to prevent freezing during player exit.
-- **Player Launch Fix**: No more UI thread hang-ups when launching the player.
-- **White Border Fix**: Say goodbye to the annoying white border and flash when entering desktop fullscreen.
-- **Native Player Shutdown**: We've bound player shutdown to prevent stranding windows.
-
-### Nuvio Web (0.3.24-beta)
-
-**Improvements & Fixes**
-
-- **Installer Update Fix**: Samsung Tizen installer updates should now work smoothly, without the "Author certificate not match" error.
-- **Continue Watching Stream Reuse**: Your Continue Watching stream will now be matched even when provider URLs change.
-- **Home Trailer Startup**: Experience improved trailer playback with a smoother reveal after the first frame and disabled YouTube captions.
-- **Simplified Advanced Settings**: We've removed the obsolete "Remember Last Profile" option to simplify your Advanced settings.
