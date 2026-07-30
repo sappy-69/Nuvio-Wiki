@@ -1,3 +1,53 @@
+## New Releases - 2026-07-30
+
+**Nuvio TV (0.7.20-beta)**
+
+We've made some awesome improvements to Nuvio TV:
+- Now you can enjoy your favorite Latin American Spanish shows with improved video descriptions.
+- You don't have to worry about duplicates when searching for new content - we've fixed the issue.
+- Our team fixed some pesky bugs causing Nuvio to crash or get stuck.
+- If you accidentally hit back on an episode, Nuvio will now unblock autoplay and take you back to the start.
+- We updated the way Nuvio displays time left in RTL (Right-To-Left) layouts, making it easier to read and understand.
+- Our SurfaceFlinger tech got a performance boost and fixed some timing issues, ensuring smoother playback.
+- You can now check out MyAnimeList ratings directly from TMDb's API (just another way we're making your life easier).
+- Live search is now available on Nuvio TV - simply type in the search bar to get a list of matching results.
+- We fixed a few more issues, including preventing unexpected auto-resumes during playback:
+  - We fixed the grid view card layout, making it easier on the eyes.
+  - You won't have to worry about numbers being displayed incorrectly in some layouts.
+  - All tab reshuffling and some cache settings have been updated for a better overall experience.
+
+**Localization**
+
+Big thanks to our translation team for helping us bring Nuvio to more languages:
+- Czech-speaking users can now enjoy a more natural experience with updated translations.
+- Hebrew and Portuguese (Brazil) translations have also been updated.
+- Our Slovak team has been working hard on improving the language, making it more intuitive and natural.
+
+**Nuvio Mobile (0.3.2)**
+
+We're making Nuvio Mobile better with each update:
+- Official client devices can now be registered more smoothly.
+- Play account settings and background services have been updated for better performance.
+- Nuvio's CardDepthEffect has been improved to prevent sheen overlays from getting out of shape.
+- Card header accent lines are now removed for a more streamlined design.
+- Cloud library search is now a breeze - just type and go!
+- MyAnimeList ratings are now directly available from the MDBList API.
+- Per-profile isolation for Trakt auth and storage has been fixed for a more secure experience.
+- Image-based subtitle rendering has been fixed for better visibility.
+
+**Nuvio Desktop (0.1.15-alpha)**
+
+Nuvio Desktop just got a whole lot better with these fixes:
+- The Cold-launch catalog synchronization has been stabilized, ensuring smooth content loading.
+- Drag-scrolling continue-watching functionality has been fixed.
+- Card sheen clips are now correctly applied for a prettier design.
+- Escape key now correctly Exits full-screen mode before navigating away.
+
+**Nuvio Web (0.3.26-beta)**
+
+Don't worry - we didn't forget about Nuvio Web!
+- We fixed some issues that might have caused annoyances while using Nuvio Web.
+---
 ## New Releases - 2026-07-28
 
 **Nuvio TV (0.7.20-beta)**
@@ -106,41 +156,3 @@ Catch up with the latest web update and enjoy a more intuitive and enjoyable exp
 * Skip Intro, Skip Outro, and primary detail actions have been fixed to use correct focus colors with custom themes, making it easier to navigate your content.
 * Library focus restoration has been improved to prevent browser focus from unexpectedly scrolling the content, giving you a smoother experience.
 * CVE-2026-32141 and CVE-2026-33228 have been resolved by pinning flatted 3.4.2 across the dependency tree and cleaning stale lockfile entries, ensuring your security and stability.
----
-## New Releases - 2026-07-26
-
-### Nuvio TV (0.7.20-beta)
-
-- **Watch Your Favorites in Latin American Spanish**: Our Nuvio TV app now supports language normalization for Latin American Spanish trailers on The Movie Database (TMDB). You can enjoy your favorite shows and movies with subtitles and audio in your preferred language.
-- **Fewer Glitches, More Fun**: We fixed some pesky issues that were causing problems like duplicate fetch responses, stuck autoloaders, and unexpected behavior. Our app should be more stable and enjoyable for you now.
-- **Time for a Change**: If you're a fan of watching movies and shows in languages that read from right to left (RTL), you'll appreciate the changes we made to display time left. No more confusing times, just a clean and easy-to-read interface.
-- **New Features to Explore**: We added MyAnimeList (MAL) ratings from MDBList API, live search while typing, and more cloud library features. Now you can easily find and watch your favorite anime shows.
-- **More Control, Less Stress**: Our app now prevents unexpected auto resume on transient lifecycle events, keeps your player session consistent, and fixes issues with grid view card consistency and meta cache TTL.
-
-### Localization
-
-- **Say Hello to Czech, Hebrew, and Portuguese Translations**: We've updated translations for Czech, Hebrew, and Portuguese (Brazil), so you can enjoy Nuvio in more languages. Our Slovak translations have also received some exciting improvements.
-- **Slovak Language Update**: Big shoutout to the Slovak translators who have worked hard to improve our app's translations. Their efforts will make Nuvio even more accessible to Slovak-speaking users.
-
-### Nuvio Mobile (0.3.1)
-
-- **Nuvio Engine is Here**: We've integrated the Nuvio Engine into our mobile app, bringing you faster navigation, better performance, and an overall improved user experience. Get ready to explore your favorite shows and movies like never before!
-- **Navigation, Settings, and More**: Our mobile app has received some fantastic updates, including a new navigation system, improved settings, and more. Enjoy a cleaner and more organized app that's easier to use.
-- **Upcoming and Now Playing**: We've added a separate upcoming continue watching row and improved metadata for your Now Playing content. Our mobile app now offers more features and a better way to discover new shows and movies.
-- **Grid and Shelf Layouts**: Get ready to explore your library in a whole new way! Our mobile app now supports sortable shelf and grid layouts, making it easier to find and watch your favorite content.
-- **Android Split ABI Support**: Our mobile app can now run on Android devices with split ABI (Application Binary Interface) support, providing better compatibility and performance.
-
-### Nuvio Desktop (0.1.14-alpha)
-
-- **Parental Guidance API Update**: We've updated our Parental Guidance API to ensure the app works smoothly and offers the best possible experience for adult and family-friendly content.
-- **Subtitle Rail Fix and Improved Performance**: We've fixed the subtitle rail horizontal scrolling issue and improved player exit behavior, making it more stable and enjoyable for users.
-- **UI Thread Optimization**: We've optimized our UI thread to prevent the player launch from hanging the app, ensuring a seamless experience for users.
-- **Desktop Fullscreen Fix**: We've fixed white border and flash issues when entering desktop fullscreen, providing a cleaner and more immersive experience.
-- **Native Player Shutdown Fix**: We've bound the native player shutdown to prevent it from stranding its windows, keeping the app stable and responsive.
-
-### Nuvio Web (0.3.24-beta)
-
-- **Samsung Tizen Installer Fix**: We've fixed issues with Samsung Tizen installer updates, so you can easily install and update Nuvio on your Samsung TV without any problems.
-- **Continue Watching Stream Reuse**: Our web app now improves Continue Watching stream reuse, making it easier to continue watching content from where you left off, even if the source provider URLs change.
-- **Improved Home Trailer Startup**: We've optimized home trailer startup to reveal playback after the first frame and keep YouTube captions disabled, providing a more enjoyable user experience.
-- **Simplified Advanced Settings**: We've simplified Advanced settings by removing the obsolete Remember Last Profile option, making it easier for users to customize their app settings.
