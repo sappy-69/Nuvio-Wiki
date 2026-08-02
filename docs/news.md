@@ -1,3 +1,82 @@
+## New Releases - 2026-08-02
+
+**Nuvio TV (0.8.0-beta)**
+
+New Features & Fixes
+-------------------
+
+- Say hello to SIMKL! We've partnered with them to help track our TV episodes so you can enjoy your favorite shows even more. Our friends at SIMKL will now be working with us to make sure you never miss a beat!
+- We've stabilized some fancy technology that helps bring back the focus on selected episodes, so you can pick up right where you left off.
+- We've made some updates to Play decoder and privacy link to keep things running smoothly and securely. Don't worry, your data is safe with us!
+- Your TV devices are now registered for a seamless viewing experience. That means you can easily pick up where you left off across all your devices!
+- We've added the full release date for TMDB collection movies, so you can see when your favorite movies came out. We've also expanded the hero video on collection pages to make them look more amazing!
+- When you're browsing through your Continue Watching list, your cards will now look cooler with a new design and lower corners. We've also made sure the next episode is ready for you to watch after you finish the current one!
+- When you're watching a video and Skip Intro is visible, you can now tap on the focus line to skip the intro.
+- When a problem happens and you see an error message, you can now tap on "Report Issue" to let us know what went wrong.
+- We've fixed some issues where seeking forward would take you back to the beginning of the video or the scroll position would reset when switching between source tabs.
+- We've kept your subtitles enabled even after you've adjusted the delay.
+- We've kept the Fire TV keyboard open and fixed the shimmer depth to make it look cooler.
+- When you're watching a video, the Skip Intro button now stays visible for the whole timeout duration, so you won't miss it.
+- If a video is too short and doesn't have any saved position, we'll now keep resume position when the saved duration is zero.
+- We've applied some cool font size and position settings when a subtitle track becomes active in ExoPlayer. We've also blocked the horizontal scrolling in shimmer rows, so you can enjoy your subtitles without any distractions. Plus, your subtitle preferences will now stick with you, and we'll even persist them even when you close and reopen the app!
+- We've reverted some changes that made our video player lifecycle management go awry. Focus handling, pause/resume transitions, and the way we render video are all back to normal now.
+- When you resume watching a video, the app will now remember your resume position.
+- We've hidden empty source sections in ROWS view mode, so you won't see clutter when you don't have any sources available.
+- When you hide unreleased content, we'll no longer show you titles that don't have a release date.
+- We've fixed an issue where MKV startup wouldn't work as expected because of some audio analysis delays.
+- We've improved the way we handle zero-duration cues and A/V resynchronization after long pauses, so you can watch your videos smoothly.
+- If a video can't be decoded by our built-in hardware, we'll now use software audio decoding to play it safely.
+- We've fixed the Audio Frequency Rate (AFR) preflight for extensionless streams and large MP4/MKV remuxes, so you can play your videos without any errors.
+- We've prevented short error streams from being marked watched or automatically playing the next episode. That means you won't get tricked into watching a short, broken stream instead of your favorite show!
+- We've prevented focused posters from expanding when you lose focus on the app. Now when you pick a new show or video, the poster will stay nice and centered on the screen!
+- We've made sure expanded cards stay open during the long-press action menu, so you can enjoy your content without distractions.
+- We've restored the ability to see all your items using stable item keys, so navigation is now smoother and more natural!
+- We've fixed startup loading stalls during cold starts and resume seeks, so you can get into your favorite shows faster.
+- We've restored the production company browse card focus after navigating back, so you can easily pick up where you left off!
+- We've added an HLS MIME-type fallback when container parsing fails for debrid caching streams. That means you can watch all the available streams without worrying about compatibility issues!
+- And finally, we've accelerated scrubbing while remote keys are held, so you can navigate your content even faster!
+
+**Localization**
+
+- We've fixed the hero section so it uses the correct localized month form for release dates. That means our international friends will see the right date formats in their favorite shows!
+
+- We've improved and adjusted Slovak translations to make sure our international friends can access our app seamlessly and in their native language!
+
+**Nuvio Mobile (0.4.0)**
+
+New Features & Fixes
+-------------------
+
+- Say hello to SIMKL! We've partnered with them to help track our mobile episodes, which means an even better experience for you!
+- We've fixed some issues where the app got too stressed with too many torrent caches.
+- We've taken the videoid from meta for track services in progress items, so watching is smoother than ever!
+- We've gotten rid of recent history icons for search, so your search results are now cleaner and easier to navigate.
+- We've added some cool badges to the TmdbEntityBrowser to help you identify what's trending!
+- Our Slovak friends will now have more accurate settings and feature strings, making our app even more accessible to more people!
+- We've updated Slovak translations for parental content strings, so all our international friends can watch safely!
+- We've fixed the issue where some recent episodes couldn't be marked as unwatched.
+- We've sanitized authentication errors so you get clear feedback and you can log in with confidence.
+- When you save or change your profile, the selected profile will now be activated immediately!
+- We've fixed an issue where Trakt didn't sync the correct seek position.
+
+**Nuvio Desktop (0.1.15-alpha)**
+
+New Features & Fixes
+-------------------
+
+- We've fixed an issue with our app not syncing catalogs smoothly, card scroll, and clipping when you launch a new episode.
+- We've fixed an issue where the escape key didn't exit fullscreen mode cleanly.
+- We've registered Nuvio Desktop devices, so our desktop app can now sync your library and preferences correctly!
+
+**Nuvio Web (0.3.28-beta)**
+
+New Features & Fixes
+-------------------
+
+- We've fixed an issue with movie stream discovery, so you'll now see the movie ID preserved across different sources.
+- We've fixed an issue where navigation back to the title would go awry and lose the return destination.
+- We've fixed an issue where Continue Watching detail routes would stay in browser history even after you went back.
+---
 ## New Releases - 2026-07-30
 
 **Nuvio TV (0.7.20-beta)**
@@ -95,64 +174,3 @@ Don't worry - we didn't forget about Nuvio Web!
 **Nuvio Web (0.3.26-beta)**
 
 - We've fixed a bunch of issues to make your experience on Nuvio Web smoother - enjoy!
----
-## New Releases - 2026-07-27
-
-**Nuvio TV (0.7.20-beta)**
-
-Get ready to enjoy your favorite shows and movies with our latest TV update! Here's what we've got in store for you:
-
-* We've improved our language support for Latin American Spanish trailers on TMDB, so you won't miss out on the latest content.
-* Some technical fixes were made to prevent duplicate fetch response header values. This should make things run smoother and faster for you.
-* We've also tackled some sticky issues, including stuck external auto-next loader and autoplay problems, which should help you avoid frustrations when watching your favorite shows.
-* Time left display has been updated for right-to-left (RTL) layouts, making it easier for all users to navigate your shows.
-* SurfaceFlinger HWC overlay and VSYNC timing have also been improved for a better viewing experience.
-* Your anime ratings from MyAnimeList (MAL) will now be synced with MDBList API, so you can track your progress easily.
-* Live search has been enabled while typing, giving you a more interactive and convenient experience.
-* We've also fixed some inconsistencies with grid view cards, All tab reshuffling, and meta cache TTL, so everything should look and feel more polished.
-
-**Localization**
-
-Here are some language updates that might interest you:
-
-* Czech, Hebrew, Portuguese (Brazil), and Slovak translations have been updated for better support and a more intuitive experience.
-* Slovak language also got some translation improvements, making it easier to explore your content.
-
-**Nuvio Mobile (0.3.1)**
-
-Get the latest mobile updates and enjoy a smoother, more enjoyable experience:
-
-* We've improved navigation and deferred route cleanup until the pop operation completes, giving you a seamless experience when switching between menus.
-* Nuvio Engine has been integrated for better performance and stability.
-* A recycled bitmap crash in Now Playing metadata has been fixed, so you can watch your shows without interruptions.
-* Section headings in settings have been normalized for a more consistent and user-friendly interface.
-* We've added a separate upcoming continue watching row for easy access to your next shows.
-* Poster depth has been applied to remaining surfaces, enhancing the overall visual appeal.
-* A split ABI has been supported for improved performance and compatibility.
-
-**Nuvio Desktop (0.1.14-alpha)**
-
-Our latest desktop update includes some exciting improvements:
-
-* The Parental Guidance API has been updated upstream for better support and accuracy.
-* The player subtitle rail has been fixed to prevent horizontal scrolling, giving you a more streamlined viewing experience.
-* The app has been fixed to stop freezing when exiting the player, so you can switch between apps seamlessly.
-* The player launch has been optimized to prevent hanging the UI thread, making things run smoothly.
-* The desktop fullscreen mode has been fixed to remove white border and flash issues, giving you an immersive viewing experience.
-* The native player shutdown has been bounded to prevent its windows from being stranded, ensuring a clean exit.
-
-**Nuvio Web (0.3.25-beta)**
-
-Catch up with the latest web update and enjoy a more intuitive and enjoyable experience:
-
-* Loading indicators have been aligned across Web TV with Android TV’s shared 12-segment design, covering various features and menus.
-* Buffering feedback has been improved by showing the shared loading indicator immediately when playback stalls, while preserving essential features like startup, seeking, error, and external-player safeguards.
-* LG webOS startup audio selection has been improved by keeping track discovery active for a bounded window and preserving supported tracks.
-* The modern sidebar blur has been enabled on capable LG webOS televisions running Chromium 120 or newer, while keeping it disabled on unsupported and legacy runtimes.
-* Trailer captions have been fixed to prevent reappearing after YouTube player state changes, preserving your preferences.
-* Disabled add-ons have been fixed to prevent being re-enabled after profile or device synchronization, ensuring your settings are preserved and synced correctly.
-* Subtitle discovery for Anime Kitsu and other non-IMDb sources has been improved by resolving exact unique Cinemeta matches and building addon-compatible episode IDs without replacing the original source identity.
-* The Android TV-style “Play manually” action has been added to title and episode menus for a more interactive and convenient experience.
-* Skip Intro, Skip Outro, and primary detail actions have been fixed to use correct focus colors with custom themes, making it easier to navigate your content.
-* Library focus restoration has been improved to prevent browser focus from unexpectedly scrolling the content, giving you a smoother experience.
-* CVE-2026-32141 and CVE-2026-33228 have been resolved by pinning flatted 3.4.2 across the dependency tree and cleaning stale lockfile entries, ensuring your security and stability.
