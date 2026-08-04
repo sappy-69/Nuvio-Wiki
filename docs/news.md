@@ -1,3 +1,44 @@
+## New Releases - 2026-08-04
+
+**Nuvio TV (0.8.1-beta)**
+
+We've been tweaking Nuvio TV to make it faster and smoother. Here's what's new:
+
+- Now, when Nuvio takes a snapshot of your TV time, it does it in the background so you don't notice any lag.
+- The "skip intro" button should now behave as expected, and it won't get stuck on your screen.
+- You can now scroll and navigate through episode lists and long summaries without any issues.
+
+We also added new translations for Hebrew, so our app is now more accessible to a wider range of users.
+
+**Nuvio Mobile**
+
+We've been busy fixing bugs and adding some cool new features to Nuvio Mobile. Check out what's new:
+
+- Now, your watched markers on Trakt will match up perfectly, so you can track your favorite shows without any issues.
+- You can customize your app icons and make your home screen look however you want.
+- We've improved the way we handle plugin sources and metadata, so everything loads a bit faster.
+- We fixed a few issues with playback services and dispatching commands, so you should be able to watch your shows without any problems.
+- Trakt watched refreshes are now more efficient, so you won't waste time refreshing your watched shows.
+- We improved the way we handle Trakt data, so you can see your watched shows accurately.
+- Large Trakt responses are now handled properly, so you won't get stuck on a loading screen.
+- We removed a pesky shadow that used to appear on the expanded action button, so it's now nice and clean.
+- We fixed up some issues with Kitsu and MAL IDs, so you can skip intros and correct AniSkip types without any issues.
+- We added some new translations for Greek, so our app is now more accessible to a wider range of users.
+- We fixed some issues with skip-outro seek, so you can skip the ending credits without any problems.
+
+**Nuvio Desktop (0.1.16-alpha)**
+
+We're excited to introduce a brand-new feature for Nuvio Desktop: SIMKL Native Integration!
+
+- You can now track your favorite shows in SIMKL directly within our app.
+- We fixed up some issues with desktop navigation settings, so you can customize your settings to your heart's content.
+
+**Nuvio Web (0.3.30-beta)**
+
+We've been working hard to squash bugs and fix issues on Nuvio Web. Here's a quick rundown of what we've done:
+
+- Various issues have been fixed, so our app should be more stable and reliable for you to use.
+---
 ## New Releases - 2026-08-03
 
 **Nuvio TV (0.8.1-beta)**
@@ -109,53 +150,3 @@ New Features & Fixes
 - We've fixed an issue with movie stream discovery, so you'll now see the movie ID preserved across different sources.
 - We've fixed an issue where navigation back to the title would go awry and lose the return destination.
 - We've fixed an issue where Continue Watching detail routes would stay in browser history even after you went back.
----
-## New Releases - 2026-07-30
-
-**Nuvio TV (0.7.20-beta)**
-
-We've made some awesome improvements to Nuvio TV:
-- Now you can enjoy your favorite Latin American Spanish shows with improved video descriptions.
-- You don't have to worry about duplicates when searching for new content - we've fixed the issue.
-- Our team fixed some pesky bugs causing Nuvio to crash or get stuck.
-- If you accidentally hit back on an episode, Nuvio will now unblock autoplay and take you back to the start.
-- We updated the way Nuvio displays time left in RTL (Right-To-Left) layouts, making it easier to read and understand.
-- Our SurfaceFlinger tech got a performance boost and fixed some timing issues, ensuring smoother playback.
-- You can now check out MyAnimeList ratings directly from TMDb's API (just another way we're making your life easier).
-- Live search is now available on Nuvio TV - simply type in the search bar to get a list of matching results.
-- We fixed a few more issues, including preventing unexpected auto-resumes during playback:
-  - We fixed the grid view card layout, making it easier on the eyes.
-  - You won't have to worry about numbers being displayed incorrectly in some layouts.
-  - All tab reshuffling and some cache settings have been updated for a better overall experience.
-
-**Localization**
-
-Big thanks to our translation team for helping us bring Nuvio to more languages:
-- Czech-speaking users can now enjoy a more natural experience with updated translations.
-- Hebrew and Portuguese (Brazil) translations have also been updated.
-- Our Slovak team has been working hard on improving the language, making it more intuitive and natural.
-
-**Nuvio Mobile (0.3.2)**
-
-We're making Nuvio Mobile better with each update:
-- Official client devices can now be registered more smoothly.
-- Play account settings and background services have been updated for better performance.
-- Nuvio's CardDepthEffect has been improved to prevent sheen overlays from getting out of shape.
-- Card header accent lines are now removed for a more streamlined design.
-- Cloud library search is now a breeze - just type and go!
-- MyAnimeList ratings are now directly available from the MDBList API.
-- Per-profile isolation for Trakt auth and storage has been fixed for a more secure experience.
-- Image-based subtitle rendering has been fixed for better visibility.
-
-**Nuvio Desktop (0.1.15-alpha)**
-
-Nuvio Desktop just got a whole lot better with these fixes:
-- The Cold-launch catalog synchronization has been stabilized, ensuring smooth content loading.
-- Drag-scrolling continue-watching functionality has been fixed.
-- Card sheen clips are now correctly applied for a prettier design.
-- Escape key now correctly Exits full-screen mode before navigating away.
-
-**Nuvio Web (0.3.26-beta)**
-
-Don't worry - we didn't forget about Nuvio Web!
-- We fixed some issues that might have caused annoyances while using Nuvio Web.
