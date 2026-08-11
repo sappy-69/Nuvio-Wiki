@@ -1,3 +1,46 @@
+## New Releases - 2026-08-11
+
+**Nuvio TV (0.8.3-beta)**
+
+### Bug Fixes and Enhancements
+
+- We've fixed crashes that happened when trying to watch shows, now you can keep enjoying your favorite series without interruptions. We've also made some tweaks to the layout so everything looks more organized.
+- You can now customize the look of your Continue Watching list, and we've also improved how video titles and posters are displayed. Plus, we've sorted out some issues with scrolling and playback to make it smoother.
+- We've added a new feature to save your provider credentials, so you won't have to enter them every time you want to watch something. And, for the environmentally conscious, we've increased the token lifetime to seven days, reducing unnecessary requests to our servers.
+- Now, when you're watching a short-form video, it will automatically load the correct information, and we've also fixed an issue where subtitles from previous episodes would carry over to the next one.
+- You can now search for videos without any lag, and we've also updated our library poster images.
+- We've fine-tuned the new sidecar fast startup mode, and it's now better at handling different types of videos.
+- We've fixed an issue where the 3:2 pulldown refresh weight was being overridden, and we've also improved our track frame rate to make sure it's accurate.
+- Performance issues have been addressed, and we've also fixed a crash that happened on our 3D TV.
+- You can now watch videos on WebDAV servers even after they've been redirected.
+- We've standardized the time left copy, so it's now displayed correctly.
+- We've added a reset button to the subtitle delay overlay, making it easier to customize your subtitles.
+- You can now choose whether to play videos in their original frame rate or in a different one.
+- We've introduced a new setting to "fall back" to a different group of videos if your main group fails to play.
+- We've improved video playback by reducing stuttering when you mark episodes as watched.
+
+**Localization**
+
+- We've updated our translation strings for Latin American Spanish to make sure they're accurate and helpful.
+- We've added missing translations for Hungarian to make sure our app is accessible to everyone.
+- We've added translations for 23 new languages, including Arabic, Czech, German, Greek, Spanish, French, Italian, Hebrew, Japanese, Polish, Portuguese (Brazil), Portuguese, Russian, Turkish, Ukrainian, Simplified Chinese, and Traditional Chinese.
+- We've removed some orphaned layout strings from the Hungarian and Latin American Spanish translations.
+
+### Nuvio Mobile (0.4.4)
+
+- We've fixed a memory leak that was causing the app to use too much memory when you marked videos as watched.
+- We've added a new feature to customize your TMDB Discover exclusion filters.
+- We've prevented Simkl from providing FullyWatchedSeriesKeys.
+- We've added a new toggle to manually set binge group fallback mode.
+
+### Nuvio Desktop (0.1.19-alpha)
+
+- We've fixed an issue with the macOS player focus bridge.
+
+### Nuvio Web (0.3.33-beta)
+
+- Various issues have been fixed and stability has been improved.
+---
 ## New Releases - 2026-08-05
 
 **Nuvio TV (0.8.1-beta)**
@@ -80,36 +123,3 @@ We're excited to introduce a brand-new feature for Nuvio Desktop: SIMKL Native I
 We've been working hard to squash bugs and fix issues on Nuvio Web. Here's a quick rundown of what we've done:
 
 - Various issues have been fixed, so our app should be more stable and reliable for you to use.
----
-## New Releases - 2026-08-03
-
-**Nuvio TV (0.8.1-beta)**
-
-Exciting updates are here for Nuvio TV. Here's what you can expect:
-
-- **Faster Performance**: Our team worked on making the app load faster, thanks to some behind-the-scenes changes to how it handles data.
-- **Bug Fixes**: We squashed a few pesky bugs that were causing issues with the 'Skip Intro' button and long show descriptions. Now, everything should run smoothly.
-- **New Translations**: We're growing our family, and that means more languages to choose from. Hebrew translations are now available, making Nuvio TV more accessible to everyone.
-
-**Nuvio Mobile (0.4.0)**
-
-Get ready for a mobile experience that's about to get a whole lot better! 
-
-- **New Tracking Provider**: We're joining forces with SIMKL, a top-notch tracking provider that's going to help us bring you more accurate information and better features.
-- **Stable Performance**: We fixed a few issues that were causing some trouble on Android devices, like torrent cache pressure. Now, your app should run smoothly.
-- **New Language Support**: Say hello to Slovak! We added new language strings so you can enjoy Nuvio Mobile in your native tongue.
-- **TmdbEntityBrowser**: We also added some nifty badges to make it easier to navigate through the app.
-- **More Fixes**: We made some additional tweaks to ensure that your app is stable and fun to use. We fixed issues like 'Mark as Unwatched' for entire series and corrected authentication errors.
-
-**Nuvio Desktop (0.1.16-alpha)**
-
-**Native Integration with SIMKL**: It's time to take your desktop experience to the next level with our new integration with SIMKL.
-
-- **More Visibility**: We made it easier to manage your tracking provider cards, so you can now view them right on your desktop home screen.
-- **Settings Sync**: We also fixed an issue with desktop navigation settings, so they should now sync correctly.
-
-**Nuvio Web (0.3.29-beta)**
-
-The web version of Nuvio gets a much-needed update as well. Here's what's new:
-
-- **All Systems Go**: We fixed a few issues that were causing trouble, and everything should now be running smoothly.
