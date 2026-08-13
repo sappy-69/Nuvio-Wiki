@@ -1,3 +1,36 @@
+## New Releases - 2026-08-13
+
+**Nuvio TV (0.8.4-beta)**
+
+This update is packed with exciting improvements for your Nuvio TV experience:
+
+- **Faster Streaming**: We've made some magic happen under the hood to get your favorite shows and movies to load way faster!
+- **More Languages to Choose From**: You can now enjoy subtitles in Hebrew, adding more diversity to your TV time.
+- **A Smoother Visual Ride**: Expect silky-smooth animations, fewer glitches, and a more enjoyable overall viewing experience.
+- **Play, Pause, and Resume**: No more annoying playback issues - the cache is now optimized to remember where you left off.
+- **Cleaning Up Errors**: We've also improved how Nuvio TV handles messy catalog entries, so you can focus on enjoying your content without any headaches.
+
+**Nuvio Mobile (0.4.5)**
+
+Our mobile update is all about fine-tuning your on-the-go experience:
+
+- **Better Progress Tracking**: Episode progress spacing has been tweaked to look neater, making it easier to keep track of where you're at.
+- **Cache Control**: Add-ons now behave more consistently, ensuring you don't accidentally trigger unnecessary animations.
+- **Subtitles Get a Size Boost**: You can now adjust subtitle sizes to fit your mobile screen perfectly.
+- **A Fresh Animation**: The disintegrate animation has been adjusted to look even more stylish.
+
+**Nuvio Desktop (0.1.19-alpha)**
+
+This update is a minor but important fix for our desktop users:
+
+- **macOS Focus Bridge**: We've fixed an issue that was affecting macOS player focus, making for a more seamless experience.
+
+**Nuvio Web (0.3.33-beta)**
+
+In this update, we've focused on:
+
+- **General Stability and Fixes**: We've squashed a range of pesky issues, ensuring your web experience with Nuvio is more reliable and enjoyable.
+---
 ## New Releases - 2026-08-11
 
 **Nuvio TV (0.8.3-beta)**
@@ -82,44 +115,3 @@ Our desktop app is now more integrated with SIMKL!
 **Nuvio Web (0.3.30-beta)**
 
 We've fixed various issues to make your web experience better!
----
-## New Releases - 2026-08-04
-
-**Nuvio TV (0.8.1-beta)**
-
-We've been tweaking Nuvio TV to make it faster and smoother. Here's what's new:
-
-- Now, when Nuvio takes a snapshot of your TV time, it does it in the background so you don't notice any lag.
-- The "skip intro" button should now behave as expected, and it won't get stuck on your screen.
-- You can now scroll and navigate through episode lists and long summaries without any issues.
-
-We also added new translations for Hebrew, so our app is now more accessible to a wider range of users.
-
-**Nuvio Mobile**
-
-We've been busy fixing bugs and adding some cool new features to Nuvio Mobile. Check out what's new:
-
-- Now, your watched markers on Trakt will match up perfectly, so you can track your favorite shows without any issues.
-- You can customize your app icons and make your home screen look however you want.
-- We've improved the way we handle plugin sources and metadata, so everything loads a bit faster.
-- We fixed a few issues with playback services and dispatching commands, so you should be able to watch your shows without any problems.
-- Trakt watched refreshes are now more efficient, so you won't waste time refreshing your watched shows.
-- We improved the way we handle Trakt data, so you can see your watched shows accurately.
-- Large Trakt responses are now handled properly, so you won't get stuck on a loading screen.
-- We removed a pesky shadow that used to appear on the expanded action button, so it's now nice and clean.
-- We fixed up some issues with Kitsu and MAL IDs, so you can skip intros and correct AniSkip types without any issues.
-- We added some new translations for Greek, so our app is now more accessible to a wider range of users.
-- We fixed some issues with skip-outro seek, so you can skip the ending credits without any problems.
-
-**Nuvio Desktop (0.1.16-alpha)**
-
-We're excited to introduce a brand-new feature for Nuvio Desktop: SIMKL Native Integration!
-
-- You can now track your favorite shows in SIMKL directly within our app.
-- We fixed up some issues with desktop navigation settings, so you can customize your settings to your heart's content.
-
-**Nuvio Web (0.3.30-beta)**
-
-We've been working hard to squash bugs and fix issues on Nuvio Web. Here's a quick rundown of what we've done:
-
-- Various issues have been fixed, so our app should be more stable and reliable for you to use.
