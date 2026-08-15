@@ -1,3 +1,52 @@
+## New Releases - 2026-08-15
+
+### Nuvio TV (0.8.4-beta)
+
+**New Features and Fixes**
+
+- Now you can fetch movie and TV show information more efficiently - Nuvio TV does things a bit faster.
+- The service now supports Hebrew subtitles, which should make watching movies in different languages much easier.
+- When setting up automatic timing for episodes, the 'Sync Line' feature won't progress to the next part as soon as you press a key.
+- Performance enhancements and tweaks to the subtitle rendering, streaming latency, and skipping intro features have been made for a smoother viewing experience.
+- Various design improvements, including more stable video playback, accurate resume positions, and better handling of movie collections.
+- A temporary glitch that affected the video playback experience after a pause has been fixed.
+- If a movie doesn't have any information, the system can now better handle and repair the data.
+- If you leave the video playback, your last playback position will be remembered, so you can easily continue where you left off.
+
+### Nuvio Mobile (0.4.5)
+
+**Important Fixes**
+
+- A small spacing issue that affected the episode progress bar has been fixed to give you a better mobile viewing experience.
+- The system now respects your choices for caching movie data on your mobile device.
+- The subtitle font size on iOS devices can now be adjusted to fit your preferences.
+- The 'disintegrate' animation effect that caused a minor issue has been fixed.
+
+### Nuvio Desktop (0.1.19-alpha)
+
+**Fixes**
+
+- The problem that caused an issue with the player focus on macOS devices has been resolved.
+
+### Nuvio Web (0.3.35-beta)
+
+**Enhanced Features**
+
+- The system now supports full MKV `S_HDMV/PGS` subtitle tracks.
+- If a movie is in a format that uses the `S_HDMV/PGS` subtitle track, the system can now detect and handle it properly.
+- Key metadata, such as language, name, default settings, and forced subtitles, are now preserved throughout the playback process.
+- When playing movies, the system can now extract and play the `S_HDMV/PGS` subtitle track.
+- SUP windows are now displayed with the correct `S_HDMV/PGS` subtitle timestamps.
+- When seeking or changing videos mid-playback, the system can now recover the correct playback position you previously had.
+- The system now includes improved support for `S_HDMV/PGS` subtitle decoding and rendering through `PgsParser` and `libbitsub`.
+- The system can now play multiple `S_HDMV/PGS` subtitle compositions with custom coordinates, alpha transparency, and scaling.
+- The system is better equipped to handle various `S_HDMV/PGS` related issues during playback, including seeking, track switching, and cleanup.
+- The system can now cancel obsolete extraction requests triggered due to rapid seeking, avoiding errors.
+- The system is now more efficient at handling HTTP `429` errors when retrieving PGS windows.
+- Luna service error handling has been improved for a smoother experience.
+- Fallback options are available for files without `CueRelativePosition`, providing a seamless playback experience even without that specific metadata.
+- The system still supports VobSub compatibility for continued playback in case `CueRelativePosition` is unavailable.
+---
 ## New Releases - 2026-08-13
 
 **Nuvio TV (0.8.4-beta)**
@@ -73,45 +122,3 @@ In this update, we've focused on:
 ### Nuvio Web (0.3.33-beta)
 
 - Various issues have been fixed and stability has been improved.
----
-## New Releases - 2026-08-05
-
-**Nuvio TV (0.8.1-beta)**
-
-Get ready for a smoother TV experience with Nuvio's latest updates!
-
-- **Smoother Browsing**: We've optimized our cache to work in the background, so you can focus on what you want to watch without any hiccups.
-- **Intro Trouble Gone**: We fixed the issue with the skip intro button lingering - now you can skip intros easily.
-- **Synopsis Scrolling Fixed**: Enjoy long synopsis navigation and scrolling without any issues.
-
-**Localization Updates**
-
-Our TV app now supports Hebrew, making it accessible to a broader audience. Thanks to our community for helping us translate!
-
-**Nuvio Mobile (0.4.1)**
-
-Our mobile app just got a whole lot better!
-
-- **Accurate Watched Markers**: We matched Trakt watched markers across IDs, so your watch history stays accurate.
-- **New App Icons**: Customize your app icons with our new selectable options.
-- **Improved Plugin Cache**: We split plugin source cache from metadata, making it more efficient.
-- **Play Services Improved**: Fixing playback service starts on the main thread ensures a smoother experience.
-- **Watched Refresh Reduced**: We reduced redundant Trakt watched refresh to save time.
-- **Watched State Serializing**: Serialize watched state snapshots, so you can pick up where you left off.
-- **Rate Limiting**: Contain Trakt watched rate limits to prevent any issues.
-- **Large Responses Fixed**: We fixed large Trakt watched responses to prevent crashes.
-- **Shadow Removed**: We removed the expanded action button shadow for a cleaner look.
-- **ID Routing Improved**: We improved Kitsu/MAL ID routing for skip intro and correct AniSkip types query.
-- **Localization Updated**: Improve Greek (el) localization coverage and accuracy.
-- **Skip-Outro Seek Improved**: Clamp skip-outro seek below the duration boundary and against actual duration for a smoother experience.
-
-**Nuvio Desktop (0.1.16-alpha)**
-
-Our desktop app is now more integrated with SIMKL!
-
-- **Stack Tracking**: We added stack tracking provider cards, making it easier to access your favorite content.
-- **Settings Sync Fixed**: Fixing desktop navigation settings sync ensures that your settings stay in sync.
-
-**Nuvio Web (0.3.30-beta)**
-
-We've fixed various issues to make your web experience better!
